@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUTRINOS CAPITAL - About Us</title>
+    <style>
+        /* ===================================
+           CSS Variables & Global Styles
+           =================================== */
+        :root {
+            --primary-navy: #0f172a;
+            --dark-navy: #020617;
+            --medium-navy: #1e293b;
+            --light-navy: #334155;
+            --primary-gold: #d4af37;
+            --light-gold: #f4e4c1;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --dark-gray: #475569;
+            --gradient-gold: linear-gradient(135deg, #d4af37, #f4e4c1);
+            --gradient-navy: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--primary-navy);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           About Section Styles
+           =================================== */
+        .about-premium {
+            position: relative;
+            padding: 6rem 0;
+            background: var(--gradient-navy);
+            overflow: hidden;
+        }
+
+        /* Background Pattern */
+        .about-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 30% 40%, var(--primary-gold) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, var(--primary-gold) 0%, transparent 50%);
+            background-size: 100% 100%, 100% 100%;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+
+        .section-title .highlight {
+            color: var(--primary-gold);
+            position: relative;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+        }
+
+        /* Two-Column Layout */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Left Column - Company Story */
+        .about-story {
+            opacity: 0;
+            animation: fadeInLeft 1s ease-out 0.8s forwards;
+        }
+
+        .story-header {
+            margin-bottom: 2rem;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .story-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        .story-content {
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Right Column - Mission & Values */
+        .about-mission {
+            opacity: 0;
+            animation: fadeInRight 1s ease-out 1s forwards;
+        }
+
+        .mission-header {
+            margin-bottom: 2rem;
+        }
+
+        .mission-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .mission-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        .mission-statement {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--primary-gold);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--light-gold);
+            line-height: 1.6;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Core Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .value-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--primary-navy);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .value-content {
+            flex: 1;
+        }
+
+        .value-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-description {
+            color: var(--medium-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Statistics Section */
+        .about-stats {
+            margin-top: 4rem;
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.2s forwards;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Call to Action */
+        .about-cta {
+            margin-top: 4rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.4s forwards;
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-gold);
+            color: var(--primary-navy);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-premium {
+                padding: 4rem 0;
+            }
+
+            .about-container {
+                padding: 0 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .story-title,
+            .mission-title {
+                font-size: 1.5rem;
+            }
+
+            .story-content,
+            .mission-statement {
+                font-size: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .value-item {
+                padding: 1rem;
+            }
+
+            .value-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .about-premium {
+                padding: 2rem 0;
+                background: white;
+                color: black;
+            }
+
+            .about-background {
+                display: none;
+            }
+
+            .about-premium * {
+                opacity: 1 !important;
+                animation: none !important;
+            }
+
+            .gradient-gold {
+                background: var(--primary-gold) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- About Us Section -->
+    <section class="about-premium" id="about">
+        <!-- Background Pattern -->
+        <div class="about-background"></div>
+        
+        <!-- Section Header -->
+        <div class="section-header">
+            <div class="section-subtitle">Our Story</div>
+            <h2 class="section-title">Building Trust Through <span class="highlight">Long-Term Excellence</span></h2>
+            <p class="section-description">
+                For over two decades, NEUTRINOS CAPITAL has been a beacon of stability and innovation in the investment management landscape
+            </p>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="about-container">
+            <div class="about-grid">
+                <!-- Left Column - Company Story -->
+                <div class="about-story">
+                    <div class="story-header">
+                        <h3 class="story-title">Our Journey</h3>
+                    </div>
+                    
+                    <div class="story-content">
+                        <p>
+                            Founded in 2002 by a team of seasoned investment professionals, NEUTRINOS CAPITAL emerged from a vision to democratize access to institutional-grade investment strategies. What began as a boutique firm managing $50 million has evolved into a premier investment powerhouse with over $15 billion in assets under management.
+                        </p>
+                        
+                        <p>
+                            Our growth has been guided by an unwavering commitment to our clients' success. Through market cycles, economic uncertainties, and technological disruptions, we have remained steadfast in our dedication to preserving capital while seeking superior returns. Our track record speaks volumes: 16 consecutive years of positive performance, even during the most challenging market conditions.
+                        </p>
+                        
+                        <p>
+                            Today, NEUTRINOS CAPITAL stands as a testament to the power of disciplined investing, innovative thinking, and client-centric approach. Our team of over 200 investment professionals spans the globe, bringing diverse perspectives and deep expertise to every investment decision we make.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column - Mission & Values -->
+                <div class="about-mission">
+                    <div class="mission-header">
+                        <h3 class="mission-title">Our Mission & Values</h3>
+                    </div>
+                    
+                    <!-- Mission Statement -->
+                    <div class="mission-statement">
+                        "To empower our clients with sophisticated investment strategies that preserve capital, generate consistent returns, and build lasting wealth across generations."
+                    </div>
+                    
+                    <!-- Core Values -->
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">1</div>
+                            <div class="value-content">
+                                <h4 class="value-title">Integrity First</h4>
+                                <p class="value-description">
+                                    We operate with unwavering ethical standards, transparency in all dealings, and a commitment to doing what's right for our clients, always.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">2</div>
+                            <div class="value-content">
+                                <h4 class="value-title">Excellence in Execution</h4>
+                                <p class="value-description">
+                                    We pursue perfection in every aspect of our work, from research and analysis to portfolio management and client service.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">3</div>
+                            <div class="value-content">
+                                <h4 class="value-title">Innovation Forward</h4>
+                                <p class="value-description">
+                                    We embrace cutting-edge technology and forward-thinking strategies to stay ahead of market trends and deliver superior results.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">4</div>
+                            <div class="value-content">
+                                <h4 class="value-title">Client Centric</h4>
+                                <p class="value-description">
+                                    Our clients' success is our success. We build long-term partnerships based on trust, communication, and shared goals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="about-stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">$15B+</span>
+                        <span class="stat-label">Assets Under Management</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">22</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Institutional Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">18.7%</span>
+                        <span class="stat-label">Average Annual Return</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="about-cta">
+                <p class="cta-text">
+                    Ready to experience the NEUTRINOS CAPITAL difference? Let us show you how our expertise can help you achieve your financial goals.
+                </p>
+                <button class="cta-button" onclick="handleContactUs()">
+                    <i class="fas fa-arrow-right"></i>
+                    Schedule a Consultation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script>
+        // ===================================
+        // About Section Functionality
+        // ===================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            initScrollAnimations();
+            
+            // Initialize counter animations for statistics
+            initCounterAnimations();
+            
+            // Add hover effects for value items
+            initValueInteractions();
+        });
+
+        // Scroll-based animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.about-story, .about-mission, .about-stats, .about-cta').forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        }
+
+        // Counter animation for statistics
+        function initCounterAnimations() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        animateCounter(entry.target);
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            statNumbers.forEach(stat => observer.observe(stat));
+        }
+
+        function animateCounter(element) {
+            const target = element.textContent;
+            const isPercentage = target.includes('%');
+            const isBillion = target.includes('B');
+            const isPlus = target.includes('+');
+            
+            let numericValue = parseFloat(target.replace(/[^0-9.]/g, ''));
+            let currentValue = 0;
+            const increment = numericValue / 50;
+            const duration = 2000;
+            const stepTime = duration / 50;
+
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= numericValue) {
+                    currentValue = numericValue;
+                    clearInterval(timer);
+                }
+
+                let displayValue = currentValue;
+                
+                if (isBillion) {
+                    displayValue = '$' + displayValue.toFixed(0) + 'B';
+                } else if (isPercentage) {
+                    displayValue = displayValue.toFixed(1) + '%';
+                } else {
+                    displayValue = displayValue.toFixed(0);
+                }
+
+                if (isPlus && currentValue >= numericValue) {
+                    displayValue += '+';
+                }
+
+                element.textContent = displayValue;
+            }, stepTime);
+        }
+
+        // Value item interactions
+        function initValueInteractions() {
+            const valueItems = document.querySelectorAll('.value-item');
+            
+            valueItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.value-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.value-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1) rotate(0deg)';
+                    }
+                });
+            });
+        }
+
+        // CTA Button Handler
+        function handleContactUs() {
+            // Create ripple effect
+            createRippleEffect(event);
+            
+            // Simulate action
+            console.log('Schedule Consultation clicked');
+            
+            // Show feedback
+            showFeedback('Connecting you with our team...');
+            
+            // You can add actual navigation logic here
+            // window.location.href = '/contact';
+            // or scroll to contact section
+            // document.querySelector('#contact-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Ripple effect
+        function createRippleEffect(event) {
+            const button = event.currentTarget;
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+            
+            button.style.position = 'relative';
+            button.style.overflow = 'hidden';
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Feedback notification
+        function showFeedback(message) {
+            const feedback = document.createElement('div');
+            feedback.textContent = message;
+            feedback.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--gradient-gold);
+                color: var(--primary-navy);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideInRight 0.3s ease-out;
+                box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            `;
+            
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => feedback.remove(), 300);
+            }, 3000);
+        }
+
+        // Add additional animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

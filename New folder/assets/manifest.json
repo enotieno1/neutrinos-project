@@ -1,0 +1,60 @@
+{
+  "name": "NEUTRINOS CAPITAL",
+  "short_name": "Neutrinos",
+  "description": "SEC-registered investment advisor providing premier investment management services",
+  "start_url": "/index-enhanced.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#fbbf24",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["finance", "business", "investing"],
+  "icons": [
+    {
+      "src": "logo-ceo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo-ceo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Portfolio Management",
+      "short_name": "Portfolio",
+      "description": "Manage your investment portfolio",
+      "url": "/index-enhanced.html#services",
+      "icons": [{ "src": "logo-ceo.jpeg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact Advisor",
+      "short_name": "Contact",
+      "description": "Get in touch with our investment advisors",
+      "url": "/index-enhanced.html#contact",
+      "icons": [{ "src": "logo-ceo.jpeg", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/1280x720/1a1a1a/fbbf24?text=NEUTRINOS+CAPITAL",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Investment Dashboard"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "focus-existing"]
+  }
+}

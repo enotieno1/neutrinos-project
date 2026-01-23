@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Component Demo - NEUTRINOS CAPITAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 2rem;
+            background: var(--primary-black);
+            color: var(--text-secondary);
+        }
+        
+        .demo-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .demo-title {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .demo-description {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .demo-controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .demo-btn {
+            padding: 0.5rem 1rem;
+            background: var(--orange-primary);
+            color: var(--primary-black);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .demo-btn:hover {
+            background: var(--red-primary);
+            color: var(--white);
+        }
+        
+        .demo-btn.secondary {
+            background: transparent;
+            color: var(--orange-primary);
+            border: 1px solid var(--orange-primary);
+        }
+        
+        .demo-btn.secondary:hover {
+            background: var(--orange-primary);
+            color: var(--primary-black);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-section">
+        <h1 class="demo-title">Accordion Component Demo</h1>
+        <p class="demo-description">Click headers to expand content. Only one item can be open at a time.</p>
+        
+        <div class="demo-controls">
+            <button class="demo-btn" onclick="accordionAPI.openAll(0)">Open All</button>
+            <button class="demo-btn secondary" onclick="accordionAPI.closeAll(0)">Close All</button>
+            <button class="demo-btn secondary" onclick="accordionAPI.open(0, 0)">Open First</button>
+            <button class="demo-btn secondary" onclick="accordionAPI.open(0, 1)">Open Second</button>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="content1">
+                    <h3 class="accordion-title">Investment Strategy Overview</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="content1" aria-hidden="true">
+                    <p>Our investment strategy is built on a foundation of rigorous research and disciplined risk management. We employ a multi-factor approach that considers market conditions, economic indicators, and individual client goals.</p>
+                    <ul>
+                        <li>Quantitative analysis for data-driven decisions</li>
+                        <li>Qualitative assessment of market trends</li>
+                        <li>Risk-adjusted return optimization</li>
+                        <li>Long-term value creation focus</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="content2">
+                    <h3 class="accordion-title">Risk Management Framework</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="content2" aria-hidden="true">
+                    <p>Risk management is at the core of our investment philosophy. We implement a comprehensive framework that identifies, assesses, and mitigates potential risks across all investment portfolios.</p>
+                    <ul>
+                        <li>Portfolio diversification strategies</li>
+                        <li>Stress testing and scenario analysis</li>
+                        <li>Real-time risk monitoring systems</li>
+                        <li>Compliance with regulatory requirements</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="content3">
+                    <h3 class="accordion-title">Performance Metrics</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="content3" aria-hidden="true">
+                    <p>We track and report performance using industry-standard metrics that provide transparency into our investment results and decision-making processes.</p>
+                    <ul>
+                        <li>Alpha generation relative to benchmarks</li>
+                        <li>Sharpe ratio for risk-adjusted returns</li>
+                        <li>Maximum drawdown analysis</li>
+                        <li>Quarterly performance attribution</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="content4">
+                    <h3 class="accordion-title">Client Service Approach</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="content4" aria-hidden="true">
+                    <p>Our client service model is designed to provide personalized attention and comprehensive support throughout your investment journey.</p>
+                    <ul>
+                        <li>Dedicated relationship managers</li>
+                        <li>Regular portfolio reviews and updates</li>
+                        <li>Customized reporting and analytics</li>
+                        <li>24/7 access to client portal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2 class="demo-title">Compact Variant</h2>
+        <p class="demo-description">A more compact version with smaller padding and font sizes.</p>
+        
+        <div class="accordion accordion-compact">
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="compact1">
+                    <h3 class="accordion-title">Quick Overview</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="compact1" aria-hidden="true">
+                    <p>This is a compact accordion variant with reduced padding and smaller font sizes for space-constrained layouts.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="compact2">
+                    <h3 class="accordion-title">Key Features</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="compact2" aria-hidden="true">
+                    <ul>
+                        <li>Reduced vertical space</li>
+                        <li>Smaller font sizes</li>
+                        <li>Maintained accessibility</li>
+                        <li>Same smooth animations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2 class="demo-title">Borderless Variant</h2>
+        <p class="demo-description">A minimal variant without borders for a cleaner, more integrated look.</p>
+        
+        <div class="accordion accordion-borderless">
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="borderless1">
+                    <h3 class="accordion-title">Minimal Design</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="borderless1" aria-hidden="true">
+                    <p>This borderless variant provides a cleaner, more integrated appearance that works well in minimalist designs.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" tabindex="0" role="button" aria-expanded="false" aria-controls="borderless2">
+                    <h3 class="accordion-title">Seamless Integration</h3>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content" id="borderless2" aria-hidden="true">
+                    <p>The borderless design allows the accordion to blend seamlessly with surrounding content while maintaining clear visual hierarchy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="accordion.js"></script>
+</body>
+</html>

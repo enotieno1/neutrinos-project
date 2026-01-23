@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUTRINOS CAPITAL - Performance Statistics</title>
+    <style>
+        /* ===================================
+           CSS Variables & Global Styles
+           =================================== */
+        :root {
+            --primary-navy: #0f172a;
+            --dark-navy: #020617;
+            --medium-navy: #1e293b;
+            --light-navy: #334155;
+            --primary-gold: #d4af37;
+            --light-gold: #f4e4c1;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --dark-gray: #475569;
+            --gradient-gold: linear-gradient(135deg, #d4af37, #f4e4c1);
+            --gradient-navy: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--primary-navy);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           Statistics Section Styles
+           =================================== */
+        .statistics-premium {
+            position: relative;
+            padding: 6rem 0;
+            background: var(--gradient-navy);
+            overflow: hidden;
+        }
+
+        /* Background Pattern */
+        .statistics-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 30% 20%, var(--primary-gold) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, var(--primary-gold) 0%, transparent 50%);
+            background-size: 100% 100%, 100% 100%;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-20px, -20px) scale(1.1); }
+            66% { transform: translate(20px, -10px) scale(1.05); }
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+
+        .section-title .highlight {
+            color: var(--primary-gold);
+            position: relative;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+        }
+
+        /* Statistics Container */
+        .statistics-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Main Statistics Grid */
+        .statistics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Statistic Card */
+        .statistic-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .statistic-card:nth-child(1) { animation-delay: 0.8s; }
+        .statistic-card:nth-child(2) { animation-delay: 0.9s; }
+        .statistic-card:nth-child(3) { animation-delay: 1.0s; }
+        .statistic-card:nth-child(4) { animation-delay: 1.1s; }
+
+        /* Card Hover Effects */
+        .statistic-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Card Background Gradient on Hover */
+        .statistic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.02));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .statistic-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Statistic Icon */
+        .statistic-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-gold);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .statistic-icon i {
+            font-size: 2rem;
+            color: var(--primary-navy);
+            transition: transform 0.4s ease;
+        }
+
+        .statistic-card:hover .statistic-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .statistic-card:hover .statistic-icon i {
+            transform: scale(1.1);
+        }
+
+        /* Statistic Number */
+        .statistic-number {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            display: block;
+            line-height: 1;
+            position: relative;
+        }
+
+        .statistic-number .suffix {
+            font-size: 0.6em;
+            font-weight: 600;
+        }
+
+        /* Statistic Label */
+        .statistic-label {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        /* Statistic Description */
+        .statistic-description {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Progress Bar */
+        .statistic-progress {
+            margin-top: 1.5rem;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+            width: 0;
+            transition: width 2s ease-out;
+        }
+
+        /* Additional Statistics Row */
+        .statistics-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .stat-item:nth-child(1) { animation-delay: 1.2s; }
+        .stat-item:nth-child(2) { animation-delay: 1.3s; }
+        .stat-item:nth-child(3) { animation-delay: 1.4s; }
+        .stat-item:nth-child(4) { animation-delay: 1.5s; }
+        .stat-item:nth-child(5) { animation-delay: 1.6s; }
+        .stat-item:nth-child(6) { animation-delay: 1.7s; }
+
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-name {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Performance Chart Section */
+        .performance-chart {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 1.8s forwards;
+        }
+
+        .chart-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .chart-subtitle {
+            color: var(--medium-gray);
+        }
+
+        .chart-container {
+            height: 300px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 100%;
+            gap: 1rem;
+        }
+
+        .chart-bar {
+            flex: 1;
+            background: var(--gradient-gold);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 0;
+        }
+
+        .chart-bar:hover {
+            opacity: 0.8;
+            transform: translateY(-5px);
+        }
+
+        .chart-bar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+            white-space: nowrap;
+        }
+
+        .chart-bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .chart-bar:hover .chart-bar-value {
+            opacity: 1;
+        }
+
+        /* Call to Action */
+        .statistics-cta {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 16px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 2.0s forwards;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-gold);
+            color: var(--primary-navy);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .statistics-premium {
+                padding: 4rem 0;
+            }
+
+            .statistics-container {
+                padding: 0 1rem;
+            }
+
+            .statistics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .statistic-card {
+                padding: 2rem;
+            }
+
+            .statistic-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .statistic-icon i {
+                font-size: 1.5rem;
+            }
+
+            .statistics-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .performance-chart {
+                padding: 2rem;
+            }
+
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .statistics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .statistics-row {
+                grid-template-columns: 1fr;
+            }
+
+            .statistic-card {
+                padding: 1.5rem;
+            }
+
+            .statistic-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 1.5rem;
+            }
+
+            .statistic-icon i {
+                font-size: 1.3rem;
+            }
+
+            .statistic-number {
+                font-size: 2.5rem;
+            }
+
+            .performance-chart {
+                padding: 1.5rem;
+            }
+
+            .chart-container {
+                height: 200px;
+            }
+
+            .chart-bars {
+                gap: 0.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .statistics-premium {
+                padding: 2rem 0;
+                background: white;
+                color: black;
+            }
+
+            .statistics-background {
+                display: none;
+            }
+
+            .statistics-premium * {
+                opacity: 1 !important;
+                animation: none !important;
+            }
+
+            .statistic-card {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Statistics Section -->
+    <section class="statistics-premium" id="statistics">
+        <!-- Background Pattern -->
+        <div class="statistics-background"></div>
+        
+        <!-- Section Header -->
+        <div class="section-header">
+            <div class="section-subtitle">Performance Highlights</div>
+            <h2 class="section-title">Track Record of <span class="highlight">Excellence</span></h2>
+            <p class="section-description">
+                Two decades of consistent performance, strategic growth, and client success in global investment markets
+            </p>
+        </div>
+
+        <!-- Statistics Container -->
+        <div class="statistics-container">
+            <!-- Main Statistics Grid -->
+            <div class="statistics-grid">
+                <!-- Assets Under Management -->
+                <div class="statistic-card">
+                    <div class="statistic-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="statistic-number">
+                        <span class="counter" data-target="15.2">0</span>
+                        <span class="suffix">B+</span>
+                    </div>
+                    <div class="statistic-label">Assets Under Management</div>
+                    <div class="statistic-description">
+                        Trusted with over $15 billion in client assets across diverse investment strategies
+                    </div>
+                    <div class="statistic-progress">
+                        <div class="progress-fill" data-progress="85"></div>
+                    </div>
+                </div>
+
+                <!-- Years of Experience -->
+                <div class="statistic-card">
+                    <div class="statistic-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="statistic-number">
+                        <span class="counter" data-target="22">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="statistic-label">Years of Excellence</div>
+                    <div class="statistic-description">
+                        Over two decades of navigating market cycles and delivering consistent results
+                    </div>
+                    <div class="statistic-progress">
+                        <div class="progress-fill" data-progress="95"></div>
+                    </div>
+                </div>
+
+                <!-- Global Clients -->
+                <div class="statistic-card">
+                    <div class="statistic-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="statistic-number">
+                        <span class="counter" data-target="500">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="statistic-label">Global Clients</div>
+                    <div class="statistic-description">
+                        Serving institutional and individual clients across 50+ countries worldwide
+                    </div>
+                    <div class="statistic-progress">
+                        <div class="progress-fill" data-progress="75"></div>
+                    </div>
+                </div>
+
+                <!-- Average Annual Returns -->
+                <div class="statistic-card">
+                    <div class="statistic-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="statistic-number">
+                        <span class="counter" data-target="18.7" data-decimal="true">0</span>
+                        <span class="suffix">%</span>
+                    </div>
+                    <div class="statistic-label">Average Annual Returns</div>
+                    <div class="statistic-description">
+                        Consistently outperforming market benchmarks with disciplined investment strategies
+                    </div>
+                    <div class="statistic-progress">
+                        <div class="progress-fill" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Statistics Row -->
+            <div class="statistics-row">
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="200">0</span>+
+                    </span>
+                    <span class="stat-name">Investment Professionals</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="50">0</span>+
+                    </span>
+                    <span class="stat-name">Countries</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="16">0</span>
+                    </span>
+                    <span class="stat-name">Consecutive Years</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="98">0</span>%
+                    </span>
+                    <span class="stat-name">Client Retention</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="24">0</span>/7
+                    </span>
+                    <span class="stat-name">Market Support</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">
+                        <span class="counter" data-target="4.8">0</span>
+                    </span>
+                    <span class="stat-name">Client Rating</span>
+                </div>
+            </div>
+
+            <!-- Performance Chart -->
+            <div class="performance-chart">
+                <div class="chart-header">
+                    <h3 class="chart-title">Annual Performance (Last 6 Years)</h3>
+                    <p class="chart-subtitle">Consistent outperformance across market cycles</p>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-bars">
+                        <div class="chart-bar" data-height="75" data-value="15.2%">
+                            <span class="chart-bar-value">15.2%</span>
+                            <span class="chart-bar-label">2019</span>
+                        </div>
+                        <div class="chart-bar" data-height="85" data-value="18.7%">
+                            <span class="chart-bar-value">18.7%</span>
+                            <span class="chart-bar-label">2020</span>
+                        </div>
+                        <div class="chart-bar" data-height="70" data-value="14.3%">
+                            <span class="chart-bar-value">14.3%</span>
+                            <span class="chart-bar-label">2021</span>
+                        </div>
+                        <div class="chart-bar" data-height="80" data-value="16.8%">
+                            <span class="chart-bar-value">16.8%</span>
+                            <span class="chart-bar-label">2022</span>
+                        </div>
+                        <div class="chart-bar" data-height="90" data-value="19.5%">
+                            <span class="chart-bar-value">19.5%</span>
+                            <span class="chart-bar-label">2023</span>
+                        </div>
+                        <div class="chart-bar" data-height="85" data-value="17.9%">
+                            <span class="chart-bar-value">17.9%</span>
+                            <span class="chart-bar-label">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="statistics-cta">
+                <h3 class="cta-title">Join Our Success Story</h3>
+                <p class="cta-description">
+                    Experience the difference that disciplined investment management and proven performance can make for your financial future
+                </p>
+                <button class="cta-button" onclick="handleGetStarted()">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Journey
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script>
+        // ===================================
+        // Statistics Section Functionality
+        // ===================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            initScrollAnimations();
+            
+            // Initialize counter animations
+            initCounterAnimations();
+            
+            // Initialize progress bars
+            initProgressBars();
+            
+            // Initialize chart animations
+            initChartAnimations();
+            
+            // Add interactive elements
+            initInteractiveElements();
+        });
+
+        // Scroll-based animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.statistic-card, .stat-item, .performance-chart, .statistics-cta').forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        }
+
+        // Counter animations
+        function initCounterAnimations() {
+            const counters = document.querySelectorAll('.counter');
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        animateCounter(entry.target);
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const isDecimal = element.getAttribute('data-decimal') === 'true';
+            const suffix = element.nextElementSibling?.textContent || '';
+            
+            let currentValue = 0;
+            const increment = target / 100;
+            const duration = 2000;
+            const stepTime = duration / 100;
+
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= target) {
+                    currentValue = target;
+                    clearInterval(timer);
+                }
+
+                let displayValue = currentValue;
+                
+                if (isDecimal) {
+                    displayValue = currentValue.toFixed(1);
+                } else {
+                    displayValue = Math.floor(currentValue);
+                }
+
+                element.textContent = displayValue;
+            }, stepTime);
+        }
+
+        // Progress bar animations
+        function initProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        const progress = entry.target.getAttribute('data-progress');
+                        setTimeout(() => {
+                            entry.target.style.width = progress + '%';
+                        }, 500);
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            progressBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Chart animations
+        function initChartAnimations() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        const height = entry.target.getAttribute('data-height');
+                        setTimeout(() => {
+                            entry.target.style.height = height + '%';
+                        }, 800);
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            chartBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Interactive elements
+        function initInteractiveElements() {
+            // Add hover effects to statistic cards
+            const statisticCards = document.querySelectorAll('.statistic-card');
+            
+            statisticCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.statistic-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.statistic-icon');
+                    if (icon) {
+                        icon.style.transform = 'scale(1) rotate(0deg)';
+                    }
+                });
+            });
+
+            // Add click interactions to chart bars
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach(bar => {
+                bar.addEventListener('click', function() {
+                    const value = this.getAttribute('data-value');
+                    const label = this.querySelector('.chart-bar-label').textContent;
+                    showChartDetail(label, value);
+                });
+            });
+        }
+
+        // Chart detail modal
+        function showChartDetail(year, value) {
+            // Create modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: var(--gradient-navy);
+                border: 1px solid var(--primary-gold);
+                border-radius: 16px;
+                padding: 2rem;
+                z-index: 1000;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+                animation: modalFadeIn 0.3s ease-out;
+            `;
+            
+            modal.innerHTML = `
+                <h3 style="color: var(--white); margin-bottom: 1rem;">Performance ${year}</h3>
+                <p style="color: var(--primary-gold); font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">${value}</p>
+                <p style="color: var(--medium-gray); margin-bottom: 1.5rem;">
+                    Outstanding performance driven by strategic allocation and risk management
+                </p>
+                <button onclick="this.parentElement.remove()" style="
+                    background: var(--gradient-gold);
+                    color: var(--primary-navy);
+                    border: none;
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    cursor: pointer;
+                ">Close</button>
+            `;
+            
+            // Add backdrop
+            const backdrop = document.createElement('div');
+            backdrop.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                z-index: 999;
+            `;
+            backdrop.onclick = () => {
+                modal.remove();
+                backdrop.remove();
+            };
+            
+            document.body.appendChild(backdrop);
+            document.body.appendChild(modal);
+        }
+
+        // CTA handler
+        function handleGetStarted() {
+            // Create ripple effect
+            createRippleEffect(event);
+            
+            // Simulate action
+            console.log('Start Journey clicked');
+            
+            // Show feedback
+            showFeedback('Starting your investment journey...');
+            
+            // You can add actual logic here:
+            // - Open contact form
+            // - Navigate to onboarding
+            // - Open consultation scheduler
+        }
+
+        // Ripple effect
+        function createRippleEffect(event) {
+            const button = event.currentTarget;
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+            
+            button.style.position = 'relative';
+            button.style.overflow = 'hidden';
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Feedback notification
+        function showFeedback(message) {
+            const feedback = document.createElement('div');
+            feedback.textContent = message;
+            feedback.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--gradient-gold);
+                color: var(--primary-navy);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideInRight 0.3s ease-out;
+                box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            `;
+            
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => feedback.remove(), 300);
+            }, 3000);
+        }
+
+        // Add additional animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes modalFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(0.9);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.statistic-card').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>

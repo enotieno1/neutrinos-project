@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUTRINOS CAPITAL - Premium Hero Section</title>
+    <style>
+        /* ===================================
+           CSS Variables & Global Styles
+           =================================== */
+        :root {
+            --primary-navy: #0f172a;
+            --dark-navy: #020617;
+            --medium-navy: #1e293b;
+            --light-navy: #334155;
+            --primary-gold: #d4af37;
+            --light-gold: #f4e4c1;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --dark-gray: #475569;
+            --gradient-gold: linear-gradient(135deg, #d4af37, #f4e4c1);
+            --gradient-navy: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--primary-navy);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           Premium Hero Section Styles
+           =================================== */
+        .hero-premium {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-navy);
+            overflow: hidden;
+        }
+
+        /* Background Pattern */
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 20% 50%, var(--primary-gold) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, var(--primary-gold) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, var(--primary-gold) 0%, transparent 50%);
+            background-size: 100% 100%, 100% 100%, 100% 100%;
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-20px, -20px) scale(1.1); }
+            66% { transform: translate(20px, -10px) scale(1.05); }
+        }
+
+        /* Abstract Finance Pattern */
+        .finance-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(45deg, transparent 48%, var(--primary-gold) 49%, var(--primary-gold) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary-gold) 49%, var(--primary-gold) 51%, transparent 52%);
+            background-size: 60px 60px;
+            animation: patternMove 30s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        /* Hero Content Container */
+        .hero-container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Fade-in Animation Classes */
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-out 0.3s forwards;
+        }
+
+        .hero-headline {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1.2s ease-out 0.5s forwards;
+        }
+
+        .hero-subheading {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.2s ease-out 0.7s forwards;
+        }
+
+        .hero-buttons {
+            opacity: 0;
+            transform: translateY(60px);
+            animation: fadeInUp 1.2s ease-out 0.9s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Company Logo/Brand */
+        .hero-brand {
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInScale 1s ease-out 0.1s forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .brand-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .brand-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.1em;
+        }
+
+        /* Main Headline */
+        .hero-headline h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .headline-highlight {
+            color: var(--primary-gold);
+            position: relative;
+            display: inline-block;
+        }
+
+        .headline-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: underlineExpand 1s ease-out 1.5s forwards;
+        }
+
+        @keyframes underlineExpand {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        /* Supporting Subheading */
+        .hero-subheading p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 400;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Primary CTA Button */
+        .cta-primary {
+            background: var(--gradient-gold);
+            color: var(--primary-navy);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Secondary CTA Button */
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--primary-gold);
+            position: relative;
+        }
+
+        .cta-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-gold);
+            transform: scale(0);
+            transform-origin: center;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .cta-secondary:hover {
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-secondary:hover::before {
+            transform: scale(1);
+        }
+
+        /* Button Icons */
+        .cta-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .cta-icon {
+            transform: translateX(3px);
+        }
+
+        /* Floating Elements for Visual Interest */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            font-size: 3rem;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            font-size: 2.5rem;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            font-size: 2rem;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-container {
+                padding: 1rem;
+            }
+
+            .brand-text {
+                font-size: 1rem;
+            }
+
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .hero-headline h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subheading p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .floating-element {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-headline h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subheading p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .hero-premium.loading .hero-content > * {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* Performance Optimization */
+        .hero-premium {
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        .cta-button {
+            will-change: transform, box-shadow;
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero-premium {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .hero-background,
+            .finance-pattern,
+            .floating-element {
+                display: none;
+            }
+
+            .hero-content > * {
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Hero Section -->
+    <section class="hero-premium" id="hero">
+        <!-- Background Elements -->
+        <div class="hero-background"></div>
+        <div class="finance-pattern"></div>
+        
+        <!-- Floating Visual Elements -->
+        <div class="floating-element">📈</div>
+        <div class="floating-element">💰</div>
+        <div class="floating-element">🏛️</div>
+        
+        <!-- Hero Content -->
+        <div class="hero-container">
+            <!-- Brand Identity -->
+            <div class="hero-brand">
+                <div class="brand-text">Investment Excellence</div>
+                <div class="brand-name">NEUTRINOS CAPITAL</div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="hero-content">
+                <!-- Main Headline -->
+                <div class="hero-headline">
+                    <h1>
+                        Pioneering <span class="headline-highlight">Investment Excellence</span><br>
+                        Through Strategic Innovation
+                    </h1>
+                </div>
+                
+                <!-- Supporting Subheading -->
+                <div class="hero-subheading">
+                    <p>
+                        With over $15 billion in assets under management and a legacy of superior returns, 
+                        NEUTRINOS CAPITAL delivers institutional-grade investment strategies that 
+                        consistently outperform market benchmarks while preserving capital integrity.
+                    </p>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <button class="cta-button cta-primary" onclick="handleStartInvesting()">
+                        <i class="fas fa-rocket cta-icon"></i>
+                        Start Investing
+                    </button>
+                    <button class="cta-button cta-secondary" onclick="handleContactUs()">
+                        <i class="fas fa-phone cta-icon"></i>
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JavaScript -->
+    <script>
+        // ===================================
+        // Hero Section Functionality
+        // ===================================
+        
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove loading class to trigger animations
+            setTimeout(() => {
+                document.querySelector('.hero-premium').classList.remove('loading');
+            }, 100);
+
+            // Add parallax effect on mouse move
+            initParallaxEffect();
+            
+            // Add scroll-based animations
+            initScrollAnimations();
+        });
+
+        // Parallax effect for background elements
+        function initParallaxEffect() {
+            const heroSection = document.querySelector('.hero-premium');
+            const background = document.querySelector('.hero-background');
+            const pattern = document.querySelector('.finance-pattern');
+            
+            heroSection.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { offsetWidth, offsetHeight } = heroSection;
+                
+                const xPos = (clientX - offsetWidth / 2) / offsetWidth;
+                const yPos = (clientY - offsetHeight / 2) / offsetHeight;
+                
+                if (background) {
+                    background.style.transform = `translate(${xPos * 20}px, ${yPos * 20}px)`;
+                }
+                
+                if (pattern) {
+                    pattern.style.transform = `translate(${xPos * 10}px, ${yPos * 10}px) scale(1.1)`;
+                }
+            });
+        }
+
+        // Scroll-based animations
+        function initScrollAnimations() {
+            let ticking = false;
+            
+            function updateAnimations() {
+                const scrolled = window.pageYOffset;
+                const heroSection = document.querySelector('.hero-premium');
+                const heroHeight = heroSection.offsetHeight;
+                
+                // Fade out hero as user scrolls
+                if (scrolled < heroHeight) {
+                    const opacity = 1 - (scrolled / heroHeight) * 0.5;
+                    heroSection.style.opacity = opacity;
+                    
+                    // Subtle parallax scroll effect
+                    const yPos = scrolled * 0.5;
+                    heroSection.style.transform = `translateY(${yPos}px)`;
+                }
+                
+                ticking = false;
+            }
+            
+            function requestTick() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateAnimations);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', requestTick);
+        }
+
+        // CTA Button Handlers
+        function handleStartInvesting() {
+            // Add ripple effect
+            createRippleEffect(event);
+            
+            // Simulate navigation or action
+            console.log('Start Investing clicked');
+            
+            // You can add actual navigation logic here
+            // window.location.href = '/invest';
+            // or scroll to a section
+            // document.querySelector('#investment-section').scrollIntoView({ behavior: 'smooth' });
+            
+            // Show success feedback
+            showButtonFeedback('Starting your investment journey...');
+        }
+
+        function handleContactUs() {
+            // Add ripple effect
+            createRippleEffect(event);
+            
+            // Simulate navigation or action
+            console.log('Contact Us clicked');
+            
+            // You can add actual navigation logic here
+            // window.location.href = '/contact';
+            // or scroll to contact section
+            // document.querySelector('#contact-section').scrollIntoView({ behavior: 'smooth' });
+            
+            // Show success feedback
+            showButtonFeedback('Connecting you with our team...');
+        }
+
+        // Ripple effect for buttons
+        function createRippleEffect(event) {
+            const button = event.currentTarget;
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Button feedback
+        function showButtonFeedback(message) {
+            const feedback = document.createElement('div');
+            feedback.textContent = message;
+            feedback.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--gradient-gold);
+                color: var(--primary-navy);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideInRight 0.3s ease-out;
+                box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            `;
+            
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => feedback.remove(), 300);
+            }, 3000);
+        }
+
+        // Add additional animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.hero-content > *').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>

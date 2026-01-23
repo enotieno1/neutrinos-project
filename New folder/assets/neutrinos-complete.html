@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUTRINOS CAPITAL - SEC Registered Investment Advisor | Premier Investment Management</title>
+    <meta name="description" content="NEUTRINOS CAPITAL is a SEC-registered investment advisor providing premier investment management services including portfolio management, private equity, hedge funds, and strategic consulting.">
+    <meta name="keywords" content="investment management, SEC registered advisor, portfolio management, private equity, hedge funds, financial planning, investment research">
+    <meta name="author" content="NEUTRINOS CAPITAL">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.neutrinoscapital.com">
+    <meta property="og:title" content="NEUTRINOS CAPITAL - SEC Registered Investment Advisor">
+    <meta property="og:description" content="Premier investment management firm delivering superior returns through portfolio management, private equity, and hedge funds.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.neutrinoscapital.com">
+    <meta property="og:image" content="https://www.neutrinoscapital.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEUTRINOS CAPITAL - SEC Registered Investment Advisor">
+    <meta name="twitter:description" content="Premier investment management firm delivering superior returns.">
+    <meta name="twitter:image" content="https://www.neutrinoscapital.com/images/twitter-image.jpg">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #000000;
+            --secondary-black: #1a1a1a;
+            --accent-black: #2d2d2d;
+            --red-primary: #dc2626;
+            --red-secondary: #b91c1c;
+            --orange-primary: #ea580c;
+            --orange-secondary: #c2410c;
+            --orange-light: #fed7aa;
+            --white: #ffffff;
+            --gray-light: #f8fafc;
+            --text-primary: #ffffff;
+            --text-secondary: #d1d5db;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text-primary); overflow-x: hidden; background: var(--primary-black); }
+
+        h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; margin-bottom: 1rem; color: var(--white); }
+        h1 { font-size: 3.5rem; } h2 { font-size: 3rem; } h3 { font-size: 2.25rem; } h4 { font-size: 1.875rem; }
+        p { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1.125rem; }
+
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); z-index: 1000; transition: var(--transition); }
+        .navbar.scrolled { background: var(--primary-black); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; transition: var(--transition); }
+        .logo img { height: 40px; margin-right: 10px; }
+        .logo-text { font-size: 1.75rem; font-weight: 800; color: var(--white); }
+        .logo:hover { color: var(--orange-primary); }
+        .nav-menu { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-link { color: var(--white); text-decoration: none; font-weight: 600; font-size: 1rem; transition: var(--transition); position: relative; text-transform: uppercase; padding: 0.6rem 1.2rem; border-radius: 6px; min-width: 80px; text-align: center; }
+        .nav-link:hover { background: rgba(234, 88, 12, 0.15); color: var(--orange-primary); transform: translateY(-1px); }
+        .nav-link::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 0; height: 2px; background: var(--orange-primary); transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link.active { color: var(--orange-primary); background: rgba(234, 88, 12, 0.15); transform: translateY(-1px); }
+        .nav-link:focus { outline: 2px solid var(--orange-primary); outline-offset: 2px; }
+        .nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+        
+        /* Dropdown Menu Styles */
+        .nav-dropdown { position: relative; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 8px; min-width: 200px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: var(--transition); z-index: 1000; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content { padding: 0.5rem 0; }
+        .dropdown-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; color: var(--text-secondary); text-decoration: none; transition: var(--transition); border-radius: 4px; }
+        .dropdown-item:hover { background: rgba(234, 88, 12, 0.1); color: var(--orange-primary); }
+        .dropdown-item i { font-size: 1rem; width: 20px; text-align: center; }
+        .dropdown-item span { font-size: 0.9rem; font-weight: 500; }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown:hover .nav-link { color: var(--orange-primary); }
+        
+        @media (max-width: 768px) {
+            .dropdown-menu { position: fixed; top: auto; left: 0; right: 0; width: 100%; border-radius: 0 0 8px 8px; min-width: auto; }
+            .dropdown-item { padding: 1rem; }
+            .nav-dropdown { position: static; }
+        }
+
+        .hero { min-height: 100vh; background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(234, 88, 12, 0.2) 0%, transparent 50%); }
+        .hero-content { max-width: 900px; padding: 2rem; position: relative; z-index: 1; animation: fadeInUp 1s ease-out; }
+        .hero h1 { font-size: 4rem; margin-bottom: 1.5rem; color: var(--white); font-weight: 800; line-height: 1.1; }
+        .hero .subtitle { font-size: 1.5rem; margin-bottom: 2rem; color: var(--orange-light); font-weight: 300; }
+        .hero-description { font-size: 1.25rem; margin-bottom: 3rem; color: rgba(255, 255, 255, 0.9); max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+        .cta-primary, .cta-secondary { padding: 1rem 2.5rem; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; transition: var(--transition); display: inline-block; text-transform: uppercase; }
+        .cta-primary { background: var(--red-primary); color: var(--white); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .cta-primary:hover { background: var(--red-secondary); transform: translateY(-3px); }
+        .cta-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .cta-secondary:hover { background: var(--white); color: var(--primary-black); transform: translateY(-3px); }
+
+        .section { padding: 6rem 2rem; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-title { color: var(--white); font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.25rem; max-width: 700px; margin: 0 auto; }
+        .gold-accent { color: var(--orange-primary); }
+
+        .about { background: var(--accent-black); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-text h3 { color: var(--white); font-size: 2.5rem; margin-bottom: 2rem; }
+        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .feature-item { display: flex; align-items: flex-start; gap: 1rem; }
+        .feature-icon { width: 50px; height: 50px; background: var(--orange-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .service-category { margin-bottom: 3rem; }
+        .category-header { display: flex; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid rgba(234, 88, 12, 0.3); }
+        .category-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--red-primary), var(--orange-primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; margin-right: 1.5rem; box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3); }
+        .category-title { color: var(--white); font-size: 2rem; font-weight: 800; }
+        .category-subtitle { color: var(--text-secondary); font-size: 1rem; margin-left: auto; font-style: italic; }
+        .service-cards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); padding: 2.5rem 2rem; border-radius: 15px; text-align: left; transition: var(--transition); border: 2px solid rgba(234, 88, 12, 0.2); box-shadow: 0 8px 25px rgba(0,0,0,0.3); position: relative; overflow: hidden; cursor: pointer; display: flex; flex-direction: column; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(234, 88, 12, 0.05) 0%, transparent 70%); }
+        .service-card:hover, .service-card:focus { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(234, 88, 12, 0.3); border-color: var(--orange-primary); outline: 3px solid var(--orange-primary); outline-offset: 2px; }
+        .service-card.active { border-color: var(--red-primary); box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3); }
+        .service-header { display: flex; align-items: center; margin-bottom: 1.5rem; }
+        .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--orange-primary), var(--red-primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.4rem; margin-right: 1.5rem; flex-shrink: 0; box-shadow: 0 6px 15px rgba(234, 88, 12, 0.3); }
+        .service-title { color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .service-tagline { color: var(--orange-primary); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .service-description { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; flex-grow: 1; }
+        .service-features { display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(234, 88, 12, 0.2); }
+        .service-features.active { display: block; animation: fadeInUp 0.4s ease-out; }
+        .feature-list { list-style: none; margin: 0; padding: 0; }
+        .feature-item { display: flex; align-items: center; margin-bottom: 0.8rem; color: var(--text-secondary); font-size: 0.95rem; }
+        .feature-item::before { content: '✓'; color: var(--orange-primary); margin-right: 0.8rem; font-weight: bold; }
+        .faq-accordion { margin-top: 1.5rem; border-top: 1px solid rgba(234, 88, 12, 0.2); padding-top: 1rem; }
+        .faq-item { margin-bottom: 1rem; }
+        .faq-question { background: rgba(234, 88, 12, 0.1); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 8px; padding: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+        .faq-question:hover { background: rgba(234, 88, 12, 0.15); border-color: var(--orange-primary); }
+        .faq-question.active { background: rgba(234, 88, 12, 0.2); border-color: var(--orange-primary); }
+        .faq-title { color: var(--white); font-weight: 600; font-size: 0.95rem; }
+        .faq-icon { color: var(--orange-primary); transition: var(--transition); font-size: 1.2rem; }
+        .faq-question.active .faq-icon { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 1rem; }
+        .faq-answer.active { max-height: 500px; padding: 0 1rem 1rem; }
+        .faq-answer p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; }
+        .faq-answer strong { color: var(--orange-primary); }
+        .service-footer { margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(234, 88, 12, 0.2); }
+        .risk-indicator { display: inline-flex; align-items: center; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .risk-low { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; }
+        .risk-medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid #f59e0b; }
+        .risk-high { background: rgba(220, 38, 38, 0.2); color: #dc2626; border: 1px solid #dc2626; }
+        .risk-explanation { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.4; }
+        .risk-disclaimer { font-size: 0.75rem; color: var(--text-secondary); font-style: italic; margin-top: 0.5rem; padding: 0.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
+        .service-cta { width: 100%; padding: 1rem; background: var(--orange-primary); color: var(--primary-black); border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; }
+        .service-cta:hover, .service-cta:focus { background: var(--red-primary); color: var(--white); outline: 2px solid var(--white); outline-offset: 2px; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3); }
+        .service-cta-text { font-size: 0.8rem; color: var(--text-secondary); text-align: center; margin-top: 0.5rem; font-style: italic; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        
+        /* Investor Dashboard Entry Styles */
+        .dashboard-entry { margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 8px; text-align: center; }
+        .dashboard-entry-title { color: var(--orange-primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .dashboard-entry-text { color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 0.8rem; }
+        .dashboard-login-btn { width: 100%; padding: 0.6rem 1rem; background: transparent; border: 1px solid var(--orange-primary); color: var(--orange-primary); border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .dashboard-login-btn:hover { background: var(--orange-primary); color: var(--primary-black); }
+        .dashboard-login-btn i { font-size: 0.9rem; }
+        .secure-badge { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem; padding: 0.3rem 0.6rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; font-size: 0.7rem; color: #10b981; }
+        .secure-badge i { font-size: 0.8rem; }
+        
+        /* Filter and Search Styles */
+        .services-filter-section { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); padding: 2rem; border-radius: 15px; margin-bottom: 3rem; border: 1px solid rgba(234, 88, 12, 0.2); }
+        .filter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+        .filter-title { color: var(--white); font-size: 1.5rem; font-weight: 700; }
+        .search-container { position: relative; flex: 1; max-width: 400px; }
+        .search-input { width: 100%; padding: 0.8rem 3rem 0.8rem 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 8px; color: var(--white); font-size: 1rem; transition: var(--transition); }
+        .search-input::placeholder { color: var(--text-secondary); }
+        .search-input:focus { outline: none; border-color: var(--orange-primary); background: rgba(255, 255, 255, 0.15); }
+        .search-icon { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--orange-primary); font-size: 1.2rem; }
+        .filter-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .filter-group { display: flex; flex-direction: column; }
+        .filter-label { color: var(--orange-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .filter-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .filter-btn { padding: 0.5rem 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 20px; color: var(--text-secondary); font-size: 0.85rem; cursor: pointer; transition: var(--transition); }
+        .filter-btn:hover { background: rgba(234, 88, 12, 0.2); border-color: var(--orange-primary); color: var(--white); }
+        .filter-btn.active { background: var(--orange-primary); border-color: var(--orange-primary); color: var(--primary-black); font-weight: 600; }
+        .filter-actions { display: flex; gap: 1rem; justify-content: flex-end; }
+        .clear-filters { padding: 0.5rem 1.5rem; background: transparent; border: 1px solid var(--text-secondary); border-radius: 6px; color: var(--text-secondary); font-size: 0.9rem; cursor: pointer; transition: var(--transition); }
+        .clear-filters:hover { border-color: var(--orange-primary); color: var(--orange-primary); }
+        .results-count { color: var(--text-secondary); font-size: 0.9rem; align-self: center; }
+        .service-card.hidden { display: none; }
+        .no-results { text-align: center; padding: 3rem; color: var(--text-secondary); }
+        .no-results i { font-size: 3rem; color: var(--orange-primary); margin-bottom: 1rem; }
+        
+        /* Tabbed Interface Styles */
+        .services-tabs { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 15px; overflow: hidden; border: 1px solid rgba(234, 88, 12, 0.2); }
+        .tab-headers { display: flex; background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(234, 88, 12, 0.2); }
+        .tab-header { flex: 1; padding: 1.5rem 1rem; background: transparent; border: none; color: var(--text-secondary); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+        .tab-header:hover { background: rgba(234, 88, 12, 0.1); color: var(--orange-primary); }
+        .tab-header.active { background: var(--orange-primary); color: var(--primary-black); }
+        .tab-header.active::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--orange-primary); }
+        .tab-header i { font-size: 1.2rem; }
+        .tab-content { position: relative; }
+        .tab-panel { display: none; padding: 2rem; animation: fadeIn 0.3s ease-out; }
+        .tab-panel.active { display: block; }
+        
+        @media (max-width: 768px) {
+            .tab-headers { flex-direction: column; }
+            .tab-header { padding: 1rem; font-size: 0.9rem; }
+            .tab-panel { padding: 1rem; }
+        }
+        /* Modal Styles */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 2000; overflow-y: auto; }
+        .modal.active { display: flex; align-items: center; justify-content: center; animation: fadeIn 0.3s ease-out; }
+        .modal-content { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 20px; max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px rgba(0,0,0,0.5); border: 1px solid var(--orange-primary); position: relative; }
+        .modal-header { padding: 2rem 2.5rem 2rem; border-bottom: 1px solid rgba(234, 88, 12, 0.3); display: flex; align-items: center; justify-content: space-between; }
+        .modal-title { color: var(--white); font-size: 1.8rem; font-weight: 800; margin: 0; }
+        .modal-close { background: none; border: none; color: var(--text-secondary); font-size: 2rem; cursor: pointer; transition: var(--transition); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .modal-close:hover { color: var(--orange-primary); background: rgba(234, 88, 12, 0.1); }
+        .modal-body { padding: 2.5rem; }
+        .service-detail-section { margin-bottom: 2rem; }
+        .detail-label { color: var(--orange-primary); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .detail-value { color: var(--white); font-size: 1.2rem; font-weight: 500; margin-bottom: 1.5rem; }
+        .risk-indicator { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .risk-low { background: #10b981; color: white; }
+        .risk-medium { background: #f59e0b; color: white; }
+        .risk-high { background: #dc2626; color: white; }
+        .investment-amount { background: rgba(234, 88, 12, 0.1); border: 1px solid var(--orange-primary); border-radius: 8px; padding: 1rem; text-align: center; margin: 1.5rem 0; }
+        .amount-label { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .amount-value { color: var(--orange-primary); font-size: 2rem; font-weight: 800; }
+        .modal-cta { width: 100%; padding: 1rem 2rem; background: var(--orange-primary); color: var(--primary-black); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; margin-top: 2rem; }
+        .modal-cta:hover { background: var(--red-primary); color: var(--white); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 4rem; }
+        .philosophy-item { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 15px; border-left: 4px solid var(--orange-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: var(--transition); position: relative; overflow: hidden; }
+        .philosophy-item::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(234, 88, 12, 0.05) 0%, transparent 70%); }
+        .philosophy-item:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(234, 88, 12, 0.2); border-color: var(--red-primary); }
+        .philosophy-number { font-size: 4rem; font-weight: 900; color: var(--orange-primary); margin-bottom: 2rem; text-shadow: 0 0 20px rgba(234, 88, 12, 0.3); position: relative; z-index: 1; }
+        .philosophy-item h3 { color: var(--white); margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700; position: relative; z-index: 1; }
+        .philosophy-item p { color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; position: relative; z-index: 1; }
+
+        .performance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .performance-card { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); padding: 3rem 2rem; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-top: 4px solid var(--orange-primary); transition: var(--transition); position: relative; overflow: hidden; }
+        .performance-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(234, 88, 12, 0.1) 0%, transparent 70%); }
+        .performance-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(234, 88, 12, 0.3); border-color: var(--red-primary); }
+        .performance-number { font-size: 4rem; font-weight: 900; color: var(--orange-primary); margin-bottom: 1rem; text-shadow: 0 0 20px rgba(234, 88, 12, 0.5); position: relative; z-index: 1; }
+        .performance-label { font-size: 1.25rem; color: var(--white); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; }
+        .performance-sublabel { font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem; position: relative; z-index: 1; }
+
+        .leadership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .leader-card { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: var(--transition); border-top: 4px solid var(--orange-primary); }
+        .leader-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(234, 88, 12, 0.3); border-color: var(--red-primary); }
+        .leader-placeholder { width: 100%; height: 250px; background: linear-gradient(135deg, var(--accent-black), var(--secondary-black)); display: flex; align-items: center; justify-content: center; color: var(--orange-primary); font-size: 4rem; position: relative; overflow: hidden; }
+        .leader-placeholder::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, rgba(234, 88, 12, 0.1) 0%, transparent 70%); }
+        .cio-placeholder { background: linear-gradient(135deg, #f0f0f0, #e0e0e0); }
+        .cio-placeholder::before { background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, transparent 70%); }
+        .avatar-circle { width: 120px; height: 120px; background: linear-gradient(135deg, #ffffff, #f5f5f5); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 3px solid var(--orange-primary); position: relative; z-index: 1; }
+        .avatar-circle i { color: #666666; font-size: 3rem; }
+        .leader-info { padding: 2.5rem; background: rgba(255, 255, 255, 0.02); }
+        .leader-info h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700; }
+        .leader-title { color: var(--orange-primary); font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .leader-info p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
+
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem; }
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-black), var(--secondary-black));
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-left: 4px solid var(--orange-primary);
+        }
+        .contact-info h3 {
+            color: var(--orange-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .contact-info p {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid rgba(234, 88, 12, 0.2);
+        }
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+            border-color: var(--orange-primary);
+            box-shadow: 0 5px 15px rgba(234, 88, 12, 0.2);
+        }
+        .contact-item i {
+            color: var(--orange-primary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            min-width: 30px;
+            text-align: center;
+        }
+        .contact-item span {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .contact-form { background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--primary-black); font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 5px; font-size: 1rem; transition: var(--transition); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--orange-primary); }
+        .submit-btn { width: 100%; padding: 1rem; background: var(--red-primary); color: var(--white); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .submit-btn:hover { background: var(--red-secondary); }
+
+        .footer { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); padding: 4rem 0 2rem; color: var(--white); }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3, .footer-section h4 { color: var(--orange-primary); margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition); }
+        .footer-section a:hover { color: var(--orange-primary); }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-link { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); transition: var(--transition); }
+        .social-link:hover { background: var(--orange-primary); color: var(--white); transform: translateY(-2px); }
+        
+        .footer-compliance { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(234, 88, 12, 0.2); }
+        .compliance-section { margin-bottom: 2rem; }
+        .compliance-section h4 { color: var(--orange-primary); font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; }
+        .compliance-section p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem; }
+        .compliance-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .compliance-badge { padding: 0.4rem 0.8rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #10b981; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-legal { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-legal p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.5rem; }
+        .footer-legal a { color: var(--orange-primary); text-decoration: underline; }
+        .footer-legal small { color: var(--text-secondary); font-size: 0.8rem; }
+        
+        /* Skip link for accessibility */
+        .skip-link { position: absolute; top: -40px; left: 6px; background: var(--orange-primary); color: var(--primary-black); padding: 8px; text-decoration: none; border-radius: 4px; font-weight: 600; z-index: 10000; transition: top 0.3s; }
+        .skip-link:focus { top: 6px; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } h3 { font-size: 1.75rem; }
+            .nav-menu { position: fixed; top: 80px; right: -100%; width: 100%; height: calc(100vh - 80px); background: var(--primary-black); flex-direction: column; padding-top: 2rem; }
+            .nav-menu.active { right: 0; } .nav-toggle { display: block; }
+            .hero h1 { font-size: 2.5rem; } .hero-buttons { flex-direction: column; align-items: center; }
+            .about-content, .contact-content { grid-template-columns: 1fr; gap: 2rem; }
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="NEUTRINOS CAPITAL - Home">
+            <img src="logo.png" alt="NEUTRINOS CAPITAL Logo">
+            <span class="logo-text">NEUTRINOS CAPITAL</span>
+        </a>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+            <li role="none"><a href="#home" class="nav-link" role="menuitem" aria-current="page">Home</a></li>
+            <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+            <li role="none" class="nav-dropdown">
+                <a href="#services" class="nav-link" id="services-nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu" id="services-dropdown">
+                    <div class="dropdown-content">
+                        <a href="#services" class="dropdown-item" onclick="closeDropdown('services-dropdown')">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Wealth Management</span>
+                        </a>
+                        <a href="#services" class="dropdown-item" onclick="closeDropdown('services-dropdown')">
+                            <i class="fas fa-coins"></i>
+                            <span>Asset Management</span>
+                        </a>
+                        <a href="#services" class="dropdown-item" onclick="closeDropdown('services-dropdown')">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Advisory Services</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li role="none"><a href="#philosophy" class="nav-link" role="menuitem">Philosophy</a></li>
+            <li role="none"><a href="#performance" class="nav-link" role="menuitem">Performance</a></li>
+            <li role="none"><a href="#leadership" class="nav-link" role="menuitem">Leadership</a></li>
+            <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Excellence in <span class="gold-accent">Investment</span> Management</h1>
+            <p class="subtitle">NEUTRINOS CAPITAL</p>
+            <p class="hero-description">Delivering superior investment returns through disciplined research, innovative strategies, and unwavering commitment to our clients' financial success.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-primary">Start Investing</a>
+                <a href="#about" class="cta-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="gold-accent">NEUTRINOS CAPITAL</span></h2>
+                <p class="section-subtitle">A premier investment management firm with a proven track record of excellence</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Building Wealth Through Strategic Investment</h3>
+                    <p>Founded in 2008, NEUTRINOS CAPITAL has established itself as a trusted leader in investment management.</p>
+                    <p>With over $15 billion in assets under management, we leverage deep market expertise and cutting-edge technology.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div><h4>Risk Management</h4><p>Comprehensive risk assessment</p></div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <div><h4>Performance Driven</h4><p>Consistent outperformance</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder" style="width: 100%; height: 400px; background: linear-gradient(135deg, #FF3737, #FFC080); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 2rem;">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment <span class="gold-accent">Solutions</span></h2>
+                <p class="section-subtitle">Comprehensive investment strategies designed to meet diverse client needs</p>
+            </div>
+            
+            <!-- Filter Section -->
+            <div class="services-filter-section">
+                <div class="filter-header">
+                    <h3 class="filter-title">Find Your Investment Solution</h3>
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="serviceSearch" placeholder="Search services...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label class="filter-label">Risk Level</label>
+                        <div class="filter-options">
+                            <button class="filter-btn" data-filter="risk" data-value="low">Low Risk</button>
+                            <button class="filter-btn" data-filter="risk" data-value="medium">Medium Risk</button>
+                            <button class="filter-btn" data-filter="risk" data-value="high">High Risk</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Investment Horizon</label>
+                        <div class="filter-options">
+                            <button class="filter-btn" data-filter="horizon" data-value="short">Short Term (1-3 years)</button>
+                            <button class="filter-btn" data-filter="horizon" data-value="medium">Medium Term (3-7 years)</button>
+                            <button class="filter-btn" data-filter="horizon" data-value="long">Long Term (7+ years)</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Investor Type</label>
+                        <div class="filter-options">
+                            <button class="filter-btn" data-filter="investor" data-value="individual">Individual</button>
+                            <button class="filter-btn" data-filter="investor" data-value="corporate">Corporate</button>
+                            <button class="filter-btn" data-filter="investor" data-value="accredited">Accredited</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <span class="results-count" id="resultsCount">Showing 6 services</span>
+                    <button class="clear-filters" id="clearFilters">Clear All Filters</button>
+                </div>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Tabbed Interface -->
+                <div class="services-tabs">
+                    <div class="tab-headers" role="tablist">
+                        <button class="tab-header active" role="tab" aria-selected="true" aria-controls="wealth-tab" id="wealth-tab-btn" onclick="switchTab('wealth')">
+                            <i class="fas fa-chart-line"></i>
+                            Wealth Management
+                        </button>
+                        <button class="tab-header" role="tab" aria-selected="false" aria-controls="asset-tab" id="asset-tab-btn" onclick="switchTab('asset')">
+                            <i class="fas fa-coins"></i>
+                            Asset Management
+                        </button>
+                        <button class="tab-header" role="tab" aria-selected="false" aria-controls="advisory-tab" id="advisory-tab-btn" onclick="switchTab('advisory')">
+                            <i class="fas fa-lightbulb"></i>
+                            Advisory Services
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- Wealth Management Tab Panel -->
+                        <div class="tab-panel active" id="wealth-tab" role="tabpanel" aria-labelledby="wealth-tab-btn">
+                            <section class="service-category" aria-labelledby="wealth-management-title">
+                                <div class="category-header">
+                                    <div class="category-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                                    <h3 id="wealth-management-title" class="category-title">Wealth Management</h3>
+                                    <span class="category-subtitle">Build & Protect Your Wealth</span>
+                                </div>
+                                <div class="service-cards-row">
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="portfolio-title portfolio-desc" onclick="openModal('portfolio')" onkeypress="handleCardKeypress(event, 'portfolio')" data-risk="medium" data-horizon="medium" data-investor="individual" data-title="Portfolio Management" data-description="portfolio management strategic construction">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-wallet"></i></div>
+                                <div>
+                                    <h4 id="portfolio-title" class="service-title">Portfolio Management</h4>
+                                    <p class="service-tagline">Smart Diversification</p>
+                                </div>
+                            </div>
+                            <p id="portfolio-desc" class="service-description">We build and manage your investment portfolio to grow your money safely over time.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Mix of stocks, bonds, and other investments</li>
+                                    <li class="feature-item">Regular adjustments to market changes</li>
+                                    <li class="feature-item">Expert team watching your money 24/7</li>
+                                    <li class="feature-item">Monthly performance reports</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should invest in Portfolio Management?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Investors with $50,000+ who want professional management without daily decisions.</p>
+                                        <p><strong>Best suited for:</strong> Busy professionals, retirees, and anyone seeking steady long-term growth.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Investment horizon:</strong> 3-5+ years recommended for optimal results.</p>
+                                        <p><strong>Review frequency:</strong> Quarterly rebalancing with monthly performance updates.</p>
+                                        <p><strong>Time to see results:</strong> 12-18 months for meaningful growth patterns.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Market risk:</strong> Stock market volatility can affect portfolio value.</p>
+                                        <p><strong>Inflation risk:</strong> Returns may not keep pace with inflation.</p>
+                                        <p><strong>Concentration risk:</strong> Overexposure to specific sectors or assets.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Withdrawal flexibility:</strong> Generally liquid, can withdraw within 3-5 business days.</p>
+                                        <p><strong>Penalty considerations:</strong> May have short-term trading fees or early withdrawal penalties.</p>
+                                        <p><strong>Emergency access:</strong> Options available for urgent financial needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-medium">Medium Risk</div>
+                                <p class="risk-explanation">Moderate market fluctuations expected. Potential for steady growth with some volatility.</p>
+                                <p class="risk-disclaimer">Past performance does not guarantee future results. Investments may lose value.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('portfolio')">Start Your Investment Journey</button>
+                                <p class="service-cta-text">Starting from $50,000 • Professional management included</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their investment dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('portfolio')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Portfolio Management service</span>
+                        </article>
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="financial-title financial-desc" onclick="openModal('wealth')" onkeypress="handleCardKeypress(event, 'wealth')" data-risk="low" data-horizon="long" data-investor="individual" data-title="Financial Planning" data-description="financial planning complete strategy">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-piggy-bank"></i></div>
+                                <div>
+                                    <h4 id="financial-title" class="service-title">Financial Planning</h4>
+                                    <p class="service-tagline">Secure Your Future</p>
+                                </div>
+                            </div>
+                            <p id="financial-desc" class="service-description">We help you create a complete financial plan for your life goals.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Retirement savings strategy</li>
+                                    <li class="feature-item">Kids' college funding plan</li>
+                                    <li class="feature-item">Tax-saving opportunities</li>
+                                    <li class="feature-item">Estate and inheritance planning</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should use Financial Planning?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Anyone with long-term financial goals and $25,000+ to invest.</p>
+                                        <p><strong>Best suited for:</strong> Families planning for retirement, education, or wealth transfer.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Planning horizon:</strong> 10-30 years for comprehensive financial strategies.</p>
+                                        <p><strong>Review frequency:</strong> Annual plan updates with quarterly check-ins.</p>
+                                        <p><strong>Implementation time:</strong> 3-6 months to establish complete plan.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Longevity risk:</strong> Outliving your retirement savings.</p>
+                                        <p><strong>Inflation risk:</strong> Purchasing power erosion over time.</p>
+                                        <p><strong>Policy changes:</strong> Tax laws affecting retirement accounts.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Planning flexibility:</strong> Plans can be adjusted as life circumstances change.</p>
+                                        <p><strong>Investment liquidity:</strong> Underlying investments may have varying liquidity.</p>
+                                        <p><strong>Emergency access:</strong> Separate emergency fund recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-low">Low Risk</div>
+                                <p class="risk-explanation">Conservative approach focused on capital preservation. Minimal market volatility expected.</p>
+                                <p class="risk-disclaimer">All investments carry some risk. Please review your personal risk tolerance.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('wealth')">Speak to an Advisor</button>
+                                <p class="service-cta-text">Starting from $25,000 • Tax-optimized strategies</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their financial planning dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('financial')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Financial Planning service</span>
+                        </article>
+                    </div>
+                </section>
+                        </div>
+                        
+                        <!-- Asset Management Tab Panel -->
+                        <div class="tab-panel" id="asset-tab" role="tabpanel" aria-labelledby="asset-tab-btn" hidden>
+                            <section class="service-category" aria-labelledby="asset-management-title">
+                                <div class="category-header">
+                                    <div class="category-icon" aria-hidden="true"><i class="fas fa-coins"></i></div>
+                                    <h3 id="asset-management-title" class="category-title">Asset Management</h3>
+                                    <span class="category-subtitle">Exclusive Investment Opportunities</span>
+                                </div>
+                                <div class="service-cards-row">
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="private-title private-desc" onclick="openModal('private')" onkeypress="handleCardKeypress(event, 'private')" data-risk="high" data-horizon="long" data-investor="accredited" data-title="Private Equity" data-description="private equity exclusive opportunities">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+                                <div>
+                                    <h4 id="private-title" class="service-title">Private Equity</h4>
+                                    <p class="service-tagline">High-Growth Potential</p>
+                                </div>
+                            </div>
+                            <p id="private-desc" class="service-description">Invest in private companies before they become famous and go public.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Early access to startup companies</li>
+                                    <li class="feature-item">Potential for 3x your investment</li>
+                                    <li class="feature-item">Expert company selection</li>
+                                    <li class="feature-item">5-7 year investment timeline</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should invest in Private Equity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Accredited investors with $250,000+ seeking high growth potential.</p>
+                                        <p><strong>Best suited for:</strong> Experienced investors comfortable with illiquid, long-term investments.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Investment period:</strong> 5-7 years typical lock-up period.</p>
+                                        <p><strong>Exit timeline:</strong> 7-10 years to realize full returns.</p>
+                                        <p><strong>Reporting:</strong> Annual updates with quarterly performance reviews.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Business risk:</strong> Companies may fail or underperform.</p>
+                                        <p><strong>Market risk:</strong> Economic downturns affect valuations.</p>
+                                        <p><strong>Liquidity risk:</strong> Money tied up for extended periods.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Lock-up period:</strong> No withdrawals during investment period.</p>
+                                        <p><strong>Secondary market:</strong> Limited options to sell early.</p>
+                                        <p><strong>Exit strategy:</strong> Returns realized at IPO or acquisition.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-high">High Risk</div>
+                                <p class="risk-explanation">Significant potential for high returns but also substantial losses. Illiquid investment with long lock-up periods.</p>
+                                <p class="risk-disclaimer">Suitable only for experienced investors with high risk tolerance. Capital may be lost.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('private')">Explore This Strategy</button>
+                                <p class="service-cta-text">Starting from $250,000 • Accredited investors only</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their private equity dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('private')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Private Equity service</span>
+                        </article>
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="hedge-title hedge-desc" onclick="openModal('hedge')" onkeypress="handleCardKeypress(event, 'hedge')" data-risk="high" data-horizon="short" data-investor="accredited" data-title="Hedge Funds" data-description="hedge funds market neutral strategies">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-balance-scale"></i></div>
+                                <div>
+                                    <h4 id="hedge-title" class="service-title">Hedge Funds</h4>
+                                    <p class="service-tagline">Market-Neutral Strategies</p>
+                                </div>
+                            </div>
+                            <p id="hedge-desc" class="service-description">Advanced investment strategies that can make money even when markets go down.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Profit in any market condition</li>
+                                    <li class="feature-item">Complex trading strategies</li>
+                                    <li class="feature-item">Lower market correlation</li>
+                                    <li class="feature-item">Minimum 1-year commitment</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should invest in Hedge Funds?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Sophisticated investors with $500,000+ seeking market-neutral strategies.</p>
+                                        <p><strong>Best suited for:</strong> High-net-worth individuals diversifying beyond traditional investments.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Investment horizon:</strong> 1-3 years typical commitment period.</p>
+                                        <p><strong>Performance review:</strong> Monthly performance reports available.</p>
+                                        <p><strong>Rebalancing:</strong> Quarterly strategy adjustments.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Strategy risk:</strong> Complex strategies may underperform.</p>
+                                        <p><strong>Leverage risk:</strong> Use of borrowed funds amplifies losses.</p>
+                                        <p><strong>Counterparty risk:</strong> Fund manager or broker failure.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Lock-up period:</strong> Typically 1 year minimum.</p>
+                                        <p><strong>Redemption windows:</strong> Limited to specific dates (quarterly often).</p>
+                                        <p><strong>Early withdrawal:</strong> May incur penalties or fees.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-high">High Risk</div>
+                                <p class="risk-explanation">Complex strategies with potential for significant gains or losses. Not suitable for all investors.</p>
+                                <p class="risk-disclaimer">Requires substantial investment knowledge and high risk tolerance. Performance not guaranteed.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('hedge')">Explore This Strategy</button>
+                                <p class="service-cta-text">Starting from $500,000 • Sophisticated strategies</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their hedge fund dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('hedge')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Hedge Funds service</span>
+                        </article>
+                    </div>
+                </section>
+                        </div>
+                        
+                        <!-- Advisory Services Tab Panel -->
+                        <div class="tab-panel" id="advisory-tab" role="tabpanel" aria-labelledby="advisory-tab-btn" hidden>
+                            <section class="service-category" aria-labelledby="advisory-title">
+                                <div class="category-header">
+                                    <div class="category-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+                                    <h3 id="advisory-title" class="category-title">Advisory Services</h3>
+                                    <span class="category-subtitle">Expert Guidance & Insights</span>
+                                </div>
+                                <div class="service-cards-row">
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="research-title research-desc" onclick="openModal('research')" onkeypress="handleCardKeypress(event, 'research')" data-risk="low" data-horizon="short" data-investor="individual" data-title="Investment Research" data-description="investment research data driven insights">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-search-dollar"></i></div>
+                                <div>
+                                    <h4 id="research-title" class="service-title">Investment Research</h4>
+                                    <p class="service-tagline">Data-Driven Insights</p>
+                                </div>
+                            </div>
+                            <p id="research-desc" class="service-description">Get expert research to help you make smarter investment decisions.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Company analysis and reports</li>
+                                    <li class="feature-item">Market trend predictions</li>
+                                    <li class="feature-item">Risk assessment reports</li>
+                                    <li class="feature-item">Investment recommendations</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should use Investment Research?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Investors with $10,000+ seeking data-driven decisions.</p>
+                                        <p><strong>Best suited for:</strong> DIY investors, financial advisors, and institutional clients.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Research delivery:</strong> Reports typically delivered within 1-2 weeks.</p>
+                                        <p><strong>Update frequency:</strong> Monthly market updates and quarterly deep dives.</p>
+                                        <p><strong>Trend analysis:</strong> 6-12 month forward-looking projections.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Analysis risk:</strong> Research may be incomplete or inaccurate.</p>
+                                        <p><strong>Interpretation risk:</strong> Different conclusions from same data.</p>
+                                        <p><strong>Model risk:</strong> Predictive models may be wrong.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Research access:</strong> Instant access to all purchased reports.</p>
+                                        <p><strong>Investment flexibility:</strong> Research informs but doesn't restrict investments.</p>
+                                        <p><strong>Cost recovery:</strong> Research fees are non-refundable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-low">Low Risk</div>
+                                <p class="risk-explanation">Information and guidance services with no direct investment risk. Advisory nature only.</p>
+                                <p class="risk-disclaimer">Research and advice are for informational purposes. Always consult multiple sources.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('research')">Speak to an Advisor</button>
+                                <p class="service-cta-text">Starting from $10,000 • Custom research reports</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their research dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('research')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Investment Research service</span>
+                        </article>
+                        <article class="service-card" tabindex="0" role="button" aria-labelledby="consulting-title consulting-desc" onclick="openModal('consulting')" onkeypress="handleCardKeypress(event, 'consulting')" data-risk="low" data-horizon="short" data-investor="corporate" data-title="Strategic Consulting" data-description="strategic consulting expert guidance">
+                            <div class="service-header">
+                                <div class="service-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+                                <div>
+                                    <h4 id="consulting-title" class="service-title">Strategic Consulting</h4>
+                                    <p class="service-tagline">Optimize Your Strategy</p>
+                                </div>
+                            </div>
+                            <p id="consulting-desc" class="service-description">Personal advice to improve your current investment strategy and results.</p>
+                            <div class="service-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">Portfolio health check-up</li>
+                                    <li class="feature-item">Strategy optimization</li>
+                                    <li class="feature-item">Risk management review</li>
+                                    <li class="feature-item">Performance improvement plan</li>
+                                </ul>
+                            </div>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">Who should use Strategic Consulting?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Ideal for:</strong> Investors with existing portfolios seeking optimization.</p>
+                                        <p><strong>Best suited for:</strong> Those experiencing underperformance or seeking professional advice.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the expected timelines?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Consulting period:</strong> 2-4 weeks for comprehensive analysis.</p>
+                                        <p><strong>Implementation:</strong> 1-3 months to apply recommendations.</p>
+                                        <p><strong>Follow-up:</strong> Quarterly progress reviews for 6-12 months.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What are the risk considerations?</span>
+                                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Implementation risk:</strong> Recommendations may not perform as expected.</p>
+                                        <p><strong>Market risk:</strong> Market conditions may affect strategy effectiveness.</p>
+                                        <p><strong>Execution risk:</strong> Poor implementation of recommendations.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question" onclick="toggleFAQ(this)">
+                                        <span class="faq-title">What about liquidity?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Consulting fees:</strong> Paid upfront, non-refundable.</p>
+                                        <p><strong>Investment changes:</strong> May incur trading fees or tax implications.</p>
+                                        <p><strong>Time investment:</strong> Requires time to implement and monitor changes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-footer">
+                                <div class="risk-indicator risk-low">Low Risk</div>
+                                <p class="risk-explanation">Consulting and advisory services with no direct investment exposure. Expert guidance only.</p>
+                                <p class="risk-disclaimer">Consulting provides recommendations, not guarantees. Implementation is client responsibility.</p>
+                                <button class="service-cta" onclick="event.stopPropagation(); openModal('consulting')">Speak to an Advisor</button>
+                                <p class="service-cta-text">Starting from $15,000 • Personalized strategies</p>
+                                <div class="dashboard-entry">
+                                    <div class="dashboard-entry-title">Client Portal</div>
+                                    <p class="dashboard-entry-text">Existing clients can access their consulting dashboard</p>
+                                    <button class="dashboard-login-btn" onclick="event.stopPropagation(); showDashboardLogin('consulting')">
+                                        <i class="fas fa-lock"></i>
+                                        Client Login
+                                    </button>
+                                    <div class="secure-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Secure Access
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="sr-only">Click to view detailed information about Strategic Consulting service</span>
+                        </article>
+                    </div>
+                </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No services found</h3>
+                <p>Try adjusting your filters or search terms</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section" id="philosophy" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment <span class="gold-accent">Philosophy</span></h2>
+                <p class="section-subtitle">Our approach to creating sustainable wealth through disciplined principles</p>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <div class="philosophy-number">01</div>
+                    <h3>Research-Driven Analysis</h3>
+                    <p>Rigorous fundamental research forms the foundation of every investment decision.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-number">02</div>
+                    <h3>Long-Term Value</h3>
+                    <p>We focus on investments with sustainable competitive advantages.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-number">03</div>
+                    <h3>Risk Management</h3>
+                    <p>Sophisticated frameworks protect capital while seeking returns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="section" id="performance">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Performance <span class="gold-accent">Highlights</span></h2>
+                <p class="section-subtitle">Consistent outperformance across market cycles</p>
+            </div>
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <div class="performance-number" data-target="18.7">0</div>
+                    <div class="performance-label">Annual Returns</div>
+                    <div class="performance-sublabel">Average over 10 years</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-number" data-target="15.2">0</div>
+                    <div class="performance-label">AUM in Billions</div>
+                    <div class="performance-sublabel">Assets Under Management</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-number" data-target="2500">0</div>
+                    <div class="performance-label">Clients Worldwide</div>
+                    <div class="performance-sublabel">Institutional & Individual</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-number" data-target="95">0</div>
+                    <div class="performance-label">Client Satisfaction</div>
+                    <div class="performance-sublabel">Percentage of satisfied clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="section" id="leadership" style="background: var(--gray-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Leadership <span class="gold-accent">Team</span></h2>
+                <p class="section-subtitle">Experienced professionals guiding our investment strategies</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <img src="ceo-photo.jpg" alt="ENOCK HUNDSON - CEO" style="width: 100%; height: 250px; object-fit: cover; object-position: top center;">
+                    <div class="leader-info">
+                        <h3>ENOCK HUNDSON</h3>
+                        <p class="leader-title">Chief Executive Officer</p>
+                        <p>25+ years in investment management, formerly with Goldman Sachs.</p>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-placeholder cio-placeholder">
+                        <div class="avatar-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Sarah Williams</h3>
+                        <p class="leader-title">Chief Investment Officer</p>
+                        <p>Former CIO at Bridgewater Associates, expert in global macro strategies.</p>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-placeholder cio-placeholder">
+                        <div class="avatar-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>David Rodriguez</h3>
+                        <p class="leader-title">Chief Risk Officer</p>
+                        <p>20+ years in risk management, previously at J.P. Morgan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="gold-accent">Touch</span></h2>
+                <p class="section-subtitle">Ready to start your investment journey?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>Our team is ready to discuss your financial goals.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>133 Standard Street, Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 717 261 425</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@neutrinoscapital.com</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalServiceTitle">Service Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalServiceBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NEUTRINOS CAPITAL</h3>
+                <p>Premier investment management firm delivering superior returns through disciplined investment strategies.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/neutrinos-capital" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/neutrinoscapital" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/neutrinoscapital" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook Page"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul><li><a href="#services">Portfolio Management</a></li><li><a href="#services">Private Equity</a></li><li><a href="#services">Hedge Funds</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul><li><a href="#about">About Us</a></li><li><a href="#philosophy">Investment Philosophy</a></li><li><a href="#leadership">Leadership Team</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Compliance</h4>
+                <ul><li><a href="#disclosures">SEC Disclosures</a></li><li><a href="#privacy">Privacy Policy</a></li><li><a href="#terms">Terms of Service</a></li><li><a href="#risk-disclosure">Risk Disclosure</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-compliance">
+            <div class="compliance-section">
+                <h4>Regulatory Information</h4>
+                <p>NEUTROS CAPITAL is a SEC-registered investment advisor (CRD: 1234567890). We are committed to providing transparent, compliant investment services.</p>
+                <div class="compliance-badges">
+                    <span class="compliance-badge">SEC Registered</span>
+                    <span class="compliance-badge">FINRA Member</span>
+                    <span class="compliance-badge">SIPC Member</span>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2024 NEUTRINOS CAPITAL. All rights reserved. | SEC Registered Investment Advisor | FINRA Member SIPC Member</p>
+                <p><small>Investment advisory services offered through NEUTRINOS CAPITAL. Securities offered through NEUTRINOS CAPITAL, Member FINRA/SIPC. <a href="#risk-disclosure">View Important Disclosures</a></p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
+            <p>&copy; 2024 NEUTRINOS CAPITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                        
+                        // Update ARIA attributes
+                        navLinks.forEach(navLink => {
+                            navLink.setAttribute('aria-current', 'false');
+                            navLink.classList.remove('active');
+                        });
+                        this.setAttribute('aria-current', 'page');
+                        this.classList.add('active');
+                        
+                        // Focus management for accessibility
+                        targetSection.setAttribute('tabindex', '-1');
+                        targetSection.focus();
+                        
+                        // Announce to screen readers
+                        const sectionTitle = targetSection.querySelector('h2, h3')?.textContent || targetSection.getAttribute('id');
+                        announceToScreenReader(`Navigated to ${sectionTitle}`);
+                    }
+                });
+                
+                // Add keyboard support for navigation
+                link.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // Update active nav link on scroll
+            window.addEventListener('scroll', function() {
+                let current = '';
+                const sections = document.querySelectorAll('section[id]');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    link.setAttribute('aria-current', 'false');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    }
+                });
+            });
+
+            // Screen reader announcement function
+            function announceToScreenReader(message) {
+                const announcement = document.createElement('div');
+                announcement.setAttribute('role', 'status');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.className = 'sr-only';
+                announcement.textContent = message;
+                document.body.appendChild(announcement);
+                setTimeout(() => document.body.removeChild(announcement), 1000);
+            }
+
+            // Filter and Search functionality
+            const filterState = {
+                risk: null,
+                horizon: null,
+                investor: null,
+                search: ''
+            };
+
+            // Initialize filter functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const searchInput = document.getElementById('serviceSearch');
+                const clearFiltersBtn = document.getElementById('clearFilters');
+                const serviceCards = document.querySelectorAll('.service-card');
+                const resultsCount = document.getElementById('resultsCount');
+                const noResults = document.getElementById('noResults');
+
+                // Filter button clicks
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const filterType = this.dataset.filter;
+                        const filterValue = this.dataset.value;
+                        
+                        // Toggle active state
+                        const sameTypeBtns = document.querySelectorAll(`[data-filter="${filterType}"]`);
+                        sameTypeBtns.forEach(b => b.classList.remove('active'));
+                        
+                        if (filterState[filterType] !== filterValue) {
+                            this.classList.add('active');
+                            filterState[filterType] = filterValue;
+                        } else {
+                            filterState[filterType] = null;
+                        }
+                        
+                        applyFilters();
+                    });
+                });
+
+                // Search functionality
+                searchInput.addEventListener('input', function() {
+                    filterState.search = this.value.toLowerCase();
+                    applyFilters();
+                });
+
+                // Clear filters
+                clearFiltersBtn.addEventListener('click', function() {
+                    // Reset filter state
+                    Object.keys(filterState).forEach(key => filterState[key] = key === 'search' ? '' : null);
+                    
+                    // Reset UI
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    searchInput.value = '';
+                    
+                    // Show all services
+                    applyFilters();
+                });
+
+                // Apply filters function
+                function applyFilters() {
+                    let visibleCount = 0;
+                    
+                    serviceCards.forEach(card => {
+                        const matchesRisk = !filterState.risk || card.dataset.risk === filterState.risk;
+                        const matchesHorizon = !filterState.horizon || card.dataset.horizon === filterState.horizon;
+                        const matchesInvestor = !filterState.investor || card.dataset.investor === filterState.investor;
+                        const matchesSearch = !filterState.search || 
+                            card.dataset.title.toLowerCase().includes(filterState.search) ||
+                            card.dataset.description.toLowerCase().includes(filterState.search);
+                        
+                        const isVisible = matchesRisk && matchesHorizon && matchesInvestor && matchesSearch;
+                        
+                        if (isVisible) {
+                            card.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Update results count
+                    resultsCount.textContent = `Showing ${visibleCount} service${visibleCount !== 1 ? 's' : ''}`;
+                    
+                    // Show/hide no results message
+                    if (visibleCount === 0) {
+                        noResults.style.display = 'block';
+                        document.getElementById('servicesGrid').style.display = 'none';
+                    } else {
+                        noResults.style.display = 'none';
+                        document.getElementById('servicesGrid').style.display = 'grid';
+                    }
+                }
+
+                // Make applyFilters available globally
+                window.applyFilters = applyFilters;
+            });
+
+            // Dashboard login function
+            function showDashboardLogin(serviceType) {
+                // Create a simple modal for dashboard login placeholder
+                const loginModal = document.createElement('div');
+                loginModal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.9);
+                    z-index: 3000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    animation: fadeIn 0.3s ease-out;
+                `;
+                
+                loginModal.innerHTML = `
+                    <div style="background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 20px; padding: 3rem; max-width: 400px; width: 90%; border: 1px solid var(--orange-primary); text-align: center;">
+                        <div style="margin-bottom: 2rem;">
+                            <i class="fas fa-lock" style="font-size: 3rem; color: var(--orange-primary); margin-bottom: 1rem;"></i>
+                            <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 1rem;">Client Portal Login</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Secure access to your ${getServiceName(serviceType)} dashboard</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <input type="text" placeholder="Username or Email" style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 8px; color: var(--white); margin-bottom: 1rem; box-sizing: border-box;">
+                            <input type="password" placeholder="Password" style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 8px; color: var(--white); margin-bottom: 1rem; box-sizing: border-box;">
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; justify-content: center;">
+                            <button onclick="closeDashboardLogin()" style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid var(--text-secondary); color: var(--text-secondary); border-radius: 6px; cursor: pointer;">Cancel</button>
+                            <button onclick="handleDashboardLogin('${serviceType}')" style="padding: 0.8rem 1.5rem; background: var(--orange-primary); color: var(--primary-black); border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">Login</button>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(234, 88, 12, 0.2);">
+                            <p style="color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 0.5rem;">🔒 Secure 256-bit encryption</p>
+                            <p style="color: var(--text-secondary); font-size: 0.8rem;">Two-factor authentication available</p>
+                        </div>
+                        
+                        <button onclick="closeDashboardLogin()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text-secondary); font-size: 1.5rem; cursor: pointer;">×</button>
+                    </div>
+                `;
+                
+                document.body.appendChild(loginModal);
+                document.body.style.overflow = 'hidden';
+                
+                // Focus on first input
+                setTimeout(() => {
+                    const firstInput = loginModal.querySelector('input');
+                    if (firstInput) firstInput.focus();
+                }, 100);
+            }
+            
+            function closeDashboardLogin() {
+                const loginModal = document.querySelector('div[style*="position: fixed"]');
+                if (loginModal) {
+                    loginModal.remove();
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            
+            function handleDashboardLogin(serviceType) {
+                // Placeholder for actual authentication logic
+                alert(`Dashboard login for ${getServiceName(serviceType)} - This is a placeholder. Actual authentication would be implemented here.`);
+                closeDashboardLogin();
+            }
+            
+            function getServiceName(serviceType) {
+                const serviceNames = {
+                    'portfolio': 'Portfolio Management',
+                    'financial': 'Financial Planning',
+                    'private': 'Private Equity',
+                    'hedge': 'Hedge Funds',
+                    'research': 'Investment Research',
+                    'consulting': 'Strategic Consulting'
+                };
+                return serviceNames[serviceType] || 'Service';
+            }
+
+            // Tab switching functionality
+            function switchTab(tabName) {
+                // Get all tab headers and panels
+                const tabHeaders = document.querySelectorAll('.tab-header');
+                const tabPanels = document.querySelectorAll('.tab-panel');
+                
+                // Remove active class from all tabs and panels
+                tabHeaders.forEach(header => {
+                    header.classList.remove('active');
+                    header.setAttribute('aria-selected', 'false');
+                });
+                tabPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                    panel.setAttribute('hidden', '');
+                });
+                
+                // Add active class to selected tab and panel
+                const activeHeader = document.getElementById(`${tabName}-tab-btn`);
+                const activePanel = document.getElementById(`${tabName}-tab`);
+                
+                if (activeHeader && activePanel) {
+                    activeHeader.classList.add('active');
+                    activeHeader.setAttribute('aria-selected', 'true');
+                    activePanel.classList.remove('hidden');
+                    activePanel.classList.add('active');
+                    
+                    // Announce to screen readers
+                    const tabTitle = activeHeader.textContent.trim();
+                    announceToScreenReader(`Switched to ${tabTitle} tab`);
+                }
+            }
+
+            // Keyboard navigation for tabs
+            document.addEventListener('DOMContentLoaded', function() {
+                const tabHeaders = document.querySelectorAll('.tab-header');
+                
+                tabHeaders.forEach((header, index) => {
+                    header.addEventListener('keydown', function(e) {
+                        let targetIndex = index;
+                        
+                        switch(e.key) {
+                            case 'ArrowLeft':
+                            case 'ArrowUp':
+                                e.preventDefault();
+                                targetIndex = index > 0 ? index - 1 : tabHeaders.length - 1;
+                                break;
+                            case 'ArrowRight':
+                            case 'ArrowDown':
+                                e.preventDefault();
+                                targetIndex = index < tabHeaders.length - 1 ? index + 1 : 0;
+                                break;
+                            case 'Home':
+                                e.preventDefault();
+                                targetIndex = 0;
+                                break;
+                            case 'End':
+                                e.preventDefault();
+                                targetIndex = tabHeaders.length - 1;
+                                break;
+                            case 'Enter':
+                            case ' ':
+                                e.preventDefault();
+                                this.click();
+                                return;
+                        }
+                        
+                        if (targetIndex !== index) {
+                            tabHeaders[targetIndex].focus();
+                        }
+                    });
+                });
+            });
+
+            // Dropdown menu functionality
+            const servicesNavLink = document.getElementById('services-nav-link');
+            const servicesDropdown = document.getElementById('services-dropdown');
+            
+            // Toggle dropdown on click
+            servicesNavLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = servicesDropdown.classList.contains('active');
+                closeAllDropdowns();
+                if (!isOpen) {
+                    servicesDropdown.classList.add('active');
+                    servicesNavLink.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-dropdown')) {
+                    closeAllDropdowns();
+                }
+            });
+
+            // Keyboard navigation for dropdown
+            servicesNavLink.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const isOpen = servicesDropdown.classList.contains('active');
+                    closeAllDropdowns();
+                    if (!isOpen) {
+                        servicesDropdown.classList.add('active');
+                        servicesNavLink.setAttribute('aria-expanded', 'true');
+                        // Focus first dropdown item
+                        const firstItem = servicesDropdown.querySelector('.dropdown-item');
+                        if (firstItem) firstItem.focus();
+                    }
+                } else if (e.key === 'Escape') {
+                    closeAllDropdowns();
+                }
+            });
+
+            // Keyboard navigation within dropdown
+            const dropdownItems = servicesDropdown.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach((item, index) => {
+                item.addEventListener('keydown', function(e) {
+                    let targetIndex = index;
+                    
+                    switch(e.key) {
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            targetIndex = index < dropdownItems.length - 1 ? index + 1 : 0;
+                            break;
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            targetIndex = index > 0 ? index - 1 : dropdownItems.length - 1;
+                            break;
+                        case 'Home':
+                            e.preventDefault();
+                            targetIndex = 0;
+                            break;
+                        case 'End':
+                            e.preventDefault();
+                            targetIndex = dropdownItems.length - 1;
+                            break;
+                        case 'Escape':
+                            e.preventDefault();
+                            closeAllDropdowns();
+                            servicesNavLink.focus();
+                            return;
+                    }
+                    
+                    if (targetIndex !== index) {
+                        dropdownItems[targetIndex].focus();
+                    }
+                });
+            });
+
+            function closeAllDropdowns() {
+                const allDropdowns = document.querySelectorAll('.dropdown-menu');
+                allDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+                document.querySelectorAll('[aria-expanded="true"]').forEach(element => {
+                    element.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            function closeDropdown(dropdownId) {
+                const dropdown = document.getElementById(dropdownId);
+                if (dropdown) {
+                    dropdown.classList.remove('active');
+                    const navLink = dropdown.previousElementSibling;
+                    if (navLink) {
+                        navLink.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            }
+
+            // Make closeDropdown available globally
+            window.closeDropdown = closeDropdown;
+
+            // FAQ accordion toggle function
+            function toggleFAQ(element) {
+                const answer = element.nextElementSibling;
+                const isActive = element.classList.contains('active');
+                
+                // Close all other FAQs in the same accordion
+                const accordion = element.closest('.faq-accordion');
+                const allQuestions = accordion.querySelectorAll('.faq-question');
+                const allAnswers = accordion.querySelectorAll('.faq-answer');
+                
+                allQuestions.forEach(q => q.classList.remove('active'));
+                allAnswers.forEach(a => a.classList.remove('active'));
+                
+                // Open clicked FAQ if it wasn't already open
+                if (!isActive) {
+                    element.classList.add('active');
+                    answer.classList.add('active');
+                }
+            }
+
+            // Keyboard navigation support
+            function handleCardKeypress(event, serviceKey) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openModal(serviceKey);
+                }
+            }
+
+            // Simple modal functions
+            function openModal(serviceKey) {
+                const modal = document.getElementById('serviceModal');
+                const modalTitle = document.getElementById('modalServiceTitle');
+                const modalBody = document.getElementById('modalServiceBody');
+                
+                const services = {
+                    'portfolio': {
+                        title: 'Portfolio Management',
+                        target: 'Individual investors and high-net-worth individuals seeking professional portfolio management',
+                        objectives: 'Capital preservation, steady growth, and wealth accumulation through diversified investment strategies',
+                        risk: 'medium',
+                        minimum: '$50,000'
+                    },
+                    'wealth': {
+                        title: 'Financial Planning',
+                        target: 'Clients planning for retirement, education funding, and wealth transfer',
+                        objectives: 'Tax optimization, estate planning, retirement strategies, and generational wealth transfer',
+                        risk: 'low',
+                        minimum: '$25,000'
+                    },
+                    'private': {
+                        title: 'Private Equity',
+                        target: 'Accredited investors seeking high-growth opportunities in private markets',
+                        objectives: 'Access to pre-IPO companies, venture capital, and buyout opportunities with potential for 2-3x returns',
+                        risk: 'high',
+                        minimum: '$250,000'
+                    },
+                    'hedge': {
+                        title: 'Hedge Funds',
+                        target: 'Sophisticated investors seeking alternative strategies and alpha generation',
+                        objectives: 'Market-neutral strategies, global macro exposure, and absolute returns regardless of market direction',
+                        risk: 'high',
+                        minimum: '$500,000'
+                    },
+                    'research': {
+                        title: 'Investment Research',
+                        target: 'Institutional clients and individual investors requiring deep market analysis',
+                        objectives: 'Identify undervalued securities, market timing opportunities, and sector-specific investment themes',
+                        risk: 'low',
+                        minimum: '$10,000'
+                    },
+                    'consulting': {
+                        title: 'Strategic Consulting',
+                        target: 'Organizations and individuals needing expert investment guidance',
+                        objectives: 'Portfolio optimization, risk management enhancement, and strategic planning for long-term success',
+                        risk: 'low',
+                        minimum: '$15,000'
+                    }
+                };
+                
+                const service = services[serviceKey];
+                if (!service) return;
+                
+                modalTitle.textContent = service.title;
+                modalBody.innerHTML = `
+                    <div class="service-detail-section">
+                        <div class="detail-label">Who This Service Is For</div>
+                        <div class="detail-value">${service.target}</div>
+                    </div>
+                    <div class="service-detail-section">
+                        <div class="detail-label">Investment Objectives</div>
+                        <div class="detail-value">${service.objectives}</div>
+                    </div>
+                    <div class="service-detail-section">
+                        <div class="detail-label">Risk Level</div>
+                        <div class="detail-value">
+                            <span class="risk-indicator risk-${service.risk}">${service.risk.toUpperCase()}</span>
+                        </div>
+                    </div>
+                    <div class="service-detail-section">
+                        <div class="detail-label">Minimum Investment</div>
+                        <div class="investment-amount">
+                            <div class="amount-label">Starting from</div>
+                            <div class="amount-value">${service.minimum}</div>
+                        </div>
+                    </div>
+                    <button class="modal-cta" onclick="closeModal(); window.location.href='#contact'" aria-label="Speak to an Advisor about ${service.title}">Speak to an Advisor</button>
+                `;
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Focus management
+                setTimeout(() => {
+                    const closeButton = modal.querySelector('.modal-close');
+                    if (closeButton) closeButton.focus();
+                }, 100);
+            }
+            
+            function closeModal() {
+                const modal = document.getElementById('serviceModal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                
+                // Return focus to the triggering element
+                const activeElement = document.activeElement;
+                if (activeElement && activeElement.classList.contains('service-card')) {
+                    activeElement.focus();
+                }
+            }
+            
+            // Keyboard navigation for modal
+            document.addEventListener('keydown', function(e) {
+                const modal = document.getElementById('serviceModal');
+                if (modal.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        closeModal();
+                    }
+                    if (e.key === 'Tab') {
+                        // Allow natural tab navigation within modal
+                        const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                        const firstElement = focusableElements[0];
+                        const lastElement = focusableElements[focusableElements.length - 1];
+                        
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstElement) {
+                                e.preventDefault();
+                                lastElement.focus();
+                            }
+                        } else {
+                            if (document.activeElement === lastElement) {
+                                e.preventDefault();
+                                firstElement.focus();
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('serviceModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+
+            const animateCounters = () => {
+                const counters = document.querySelectorAll('.performance-number');
+                counters.forEach(counter => {
+                    const animate = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const increment = target / 200;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(animate, 10);
+                        } else {
+                            counter.innerText = target + (counter.getAttribute('data-target').includes('.') ? '' : '+');
+                        }
+                    };
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                animate();
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    });
+                    observer.observe(counter);
+                });
+            };
+            animateCounters();
+
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const firstName = formData.get('firstName');
+                alert(`Thank you ${firstName}! Your message has been received. Our team will contact you within 24 hours.`);
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: http://localhost:8001/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow temporary or development files
+Disallow: /temp/
+Disallow: /dev/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /admin/

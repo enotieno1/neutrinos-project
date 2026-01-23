@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Functionality Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 2rem;
+            background: var(--primary-black);
+            color: var(--text-secondary);
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-title {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .test-info {
+            background: rgba(234, 88, 12, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(234, 88, 12, 0.3);
+        }
+        .debug-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title">Tab Functionality Test</h1>
+        
+        <div class="test-info">
+            <h3>Testing Instructions:</h3>
+            <ol>
+                <li>Click each tab button to test switching</li>
+                <li>Check browser console for JavaScript errors</li>
+                <li>Verify only one tab panel is visible at a time</li>
+                <li>Test keyboard navigation (Arrow keys, Enter, Space)</li>
+                <li>Check screen reader announcements</li>
+            </ol>
+        </div>
+        
+        <!-- Test Tabbed Interface -->
+        <div class="services-tabs">
+            <div class="tab-headers" role="tablist">
+                <button class="tab-header active" role="tab" aria-selected="true" aria-controls="test1-tab" id="test1-tab-btn" onclick="switchTab('test1')">
+                    <i class="fas fa-chart-line"></i>
+                    Test Tab 1
+                </button>
+                <button class="tab-header" role="tab" aria-selected="false" aria-controls="test2-tab" id="test2-tab-btn" onclick="switchTab('test2')">
+                    <i class="fas fa-coins"></i>
+                    Test Tab 2
+                </button>
+                <button class="tab-header" role="tab" aria-selected="false" aria-controls="test3-tab" id="test3-tab-btn" onclick="switchTab('test3')">
+                    <i class="fas fa-lightbulb"></i>
+                    Test Tab 3
+                </button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Test Tab 1 Panel -->
+                <div class="tab-panel active" id="test1-tab" role="tabpanel" aria-labelledby="test1-tab-btn">
+                    <h3>Test Tab 1 Content</h3>
+                    <p>This is the content for Test Tab 1. If you can see this, the tab functionality is working correctly.</p>
+                    <ul>
+                        <li>Tab switching should work</li>
+                        <li>Only one panel visible at a time</li>
+                        <li>Smooth transitions should occur</li>
+                    </ul>
+                </div>
+                
+                <!-- Test Tab 2 Panel -->
+                <div class="tab-panel" id="test2-tab" role="tabpanel" aria-labelledby="test2-tab-btn" hidden>
+                    <h3>Test Tab 2 Content</h3>
+                    <p>This is the content for Test Tab 2. The tab functionality should switch between panels seamlessly.</p>
+                    <ul>
+                        <li>JavaScript should be error-free</li>
+                        <li>Event listeners should work</li>
+                        <li>ARIA attributes should update</li>
+                    </ul>
+                </div>
+                
+                <!-- Test Tab 3 Panel -->
+                <div class="tab-panel" id="test3-tab" role="tabpanel" aria-labelledby="test3-tab-btn" hidden>
+                    <h3>Test Tab 3 Content</h3>
+                    <p>This is the content for Test Tab 3. All functionality should be working as expected.</p>
+                    <ul>
+                        <li>IDs and hrefs should match</li>
+                        <li>Keyboard navigation should work</li>
+                        <li>Screen reader support active</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="debug-info" id="debugInfo">
+            <h4>Debug Information:</h4>
+            <div id="debugContent">Loading...</div>
+        </div>
+    </div>
+    
+    <script src="services.js"></script>
+    <script>
+        // Add debug information
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugContent = document.getElementById('debugContent');
+            
+            // Check if switchTab function exists
+            if (typeof switchTab === 'function') {
+                debugContent.innerHTML += '✅ switchTab function is globally accessible<br>';
+            } else {
+                debugContent.innerHTML += '❌ switchTab function is NOT globally accessible<br>';
+            }
+            
+            // Check if tab elements exist
+            const tabHeaders = document.querySelectorAll('.tab-header');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            debugContent.innerHTML += `✅ Found ${tabHeaders.length} tab headers<br>`;
+            debugContent.innerHTML += `✅ Found ${tabPanels.length} tab panels<br>`;
+            
+            // Check if IDs match
+            const headerIds = Array.from(tabHeaders).map(h => h.id.replace('-tab-btn', ''));
+            const panelIds = Array.from(tabPanels).map(p => p.id);
+            
+            const matchingIds = headerIds.filter(id => panelIds.includes(id));
+            debugContent.innerHTML += `✅ ${matchingIds.length} matching ID pairs<br>`;
+            
+            // Add event listener for debugging
+            tabHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const tabName = this.id.replace('-tab-btn', '');
+                    debugContent.innerHTML += `🔄 Clicked: ${tabName} tab<br>`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
