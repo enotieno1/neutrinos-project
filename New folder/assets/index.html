@@ -219,7 +219,7 @@
         /* Tabbed Interface Styles */
         .services-tabs { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border-radius: 15px; overflow: hidden; border: 1px solid rgba(234, 88, 12, 0.2); }
         .tab-headers { display: flex; background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(234, 88, 12, 0.2); }
-        .tab-header { flex: 1; padding: 1.5rem 1rem; background: transparent; border: none; color: var(--text-secondary); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+        .tab-header { flex: 1; padding: 1.5rem 1rem; background: transparent; border: none; color: var(--text-secondary); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 1px; position: relative; text-decoration: none; cursor: pointer; }
         .tab-header:hover { background: rgba(234, 88, 12, 0.1); color: var(--orange-primary); }
         .tab-header.active { background: var(--orange-primary); color: var(--primary-black); }
         .tab-header.active::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--orange-primary); }
@@ -485,7 +485,7 @@
         
         .research-tools { margin-top: 4rem; }
         .tools-title { color: var(--white); font-size: 2rem; font-weight: 700; margin-bottom: 2rem; text-align: center; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .tools-grid { display: flex; gap: 2rem; justify-content: center; align-items: stretch; }
         .tool-card { background: linear-gradient(135deg, var(--primary-black), var(--secondary-black)); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 12px; padding: 2rem; text-align: center; transition: var(--transition); }
         .tool-card:hover { transform: translateY(-5px); border-color: var(--orange-primary); box-shadow: 0 20px 40px rgba(234, 88, 12, 0.2); }
         .tool-icon { font-size: 3rem; color: var(--orange-primary); margin-bottom: 1rem; }
@@ -562,7 +562,7 @@
             .featured-insight-card { grid-template-columns: 1fr; gap: 1.5rem; }
             .insight-image-placeholder, .insight-featured-image { height: 200px; }
             .insights-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .tools-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .tools-grid { flex-direction: column; gap: 1.5rem; }
             
             /* Performance Mobile */
             .summary-cards { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -620,8 +620,8 @@
                 <a href="#" class="brand-switcher">NEUTRINOS ALADDIN</a>
             </div>
             <div class="top-banner-right">
-                <a href="#client-login" class="client-login">Client Login</a>
-                <a href="#advisor-login" class="advisor-login">Financial Professional Login</a>
+                <a href="javascript:void(0)" class="client-login">Client Login</a>
+                <a href="javascript:void(0)" class="advisor-login">Financial Professional Login</a>
                 <div class="search-toggle">
                     <i class="fas fa-search"></i>
                 </div>
@@ -1022,25 +1022,49 @@
                     <div class="summary-card">
                         <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
                         <div class="summary-content">
-                            <h3>12.8%</h3>
+                            <h3>14.7%</h3>
                             <p>Annualized Return (10 Year)</p>
-                            <span class="performance-badge">Outperforming S&P 500</span>
+                            <span class="performance-badge">+4.2% vs S&P 500</span>
                         </div>
                     </div>
                     <div class="summary-card">
                         <div class="summary-icon"><i class="fas fa-shield-alt"></i></div>
                         <div class="summary-content">
-                            <h3>0.68</h3>
+                            <h3>0.82</h3>
                             <p>Risk-Adjusted Returns</p>
-                            <span class="performance-badge">Sharpe Ratio: 0.68</span>
+                            <span class="performance-badge">Sharpe Ratio: 0.82</span>
                         </div>
                     </div>
                     <div class="summary-card">
                         <div class="summary-icon"><i class="fas fa-trophy"></i></div>
                         <div class="summary-content">
-                            <h3>Top 5%</h3>
+                            <h3>Top 3%</h3>
                             <p>Large-Cap Manager (2024)</p>
                             <span class="performance-badge">Industry Recognition</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="summary-content">
+                            <h3>$28.5B</h3>
+                            <p>Assets Under Management</p>
+                            <span class="performance-badge">+22% YoY Growth</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon"><i class="fas fa-users"></i></div>
+                        <div class="summary-content">
+                            <h3>47,000+</h3>
+                            <p>Client Accounts</p>
+                            <span class="performance-badge">Global Reach</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon"><i class="fas fa-award"></i></div>
+                        <div class="summary-content">
+                            <h3>92%</h3>
+                            <p>Client Retention Rate</p>
+                            <span class="performance-badge">Industry Leading</span>
                         </div>
                     </div>
                 </div>
@@ -1088,19 +1112,19 @@
                         <div class="fund-metrics">
                             <div class="metric">
                                 <span class="metric-label">1 Year</span>
-                                <span class="metric-value positive">+15.2%</span>
+                                <span class="metric-value positive">+18.7%</span>
                             </div>
                             <div class="metric">
                                 <span class="metric-label">3 Year</span>
-                                <span class="metric-value positive">+11.8%</span>
+                                <span class="metric-value positive">+15.2%</span>
                             </div>
                             <div class="metric">
                                 <span class="metric-label">5 Year</span>
-                                <span class="metric-value positive">+13.4%</span>
+                                <span class="metric-value positive">+16.8%</span>
                             </div>
                         </div>
                         <div class="fund-details">
-                            <span class="fund-size">$8.2B AUM</span>
+                            <span class="fund-size">$12.4B AUM</span>
                             <span class="fund-inception">2015</span>
                         </div>
                     </div>
@@ -1113,19 +1137,19 @@
                         <div class="fund-metrics">
                             <div class="metric">
                                 <span class="metric-label">1 Year</span>
-                                <span class="metric-value positive">+4.2%</span>
+                                <span class="metric-value positive">+6.8%</span>
                             </div>
                             <div class="metric">
                                 <span class="metric-label">3 Year</span>
-                                <span class="metric-value positive">+3.8%</span>
+                                <span class="metric-value positive">+5.9%</span>
                             </div>
                             <div class="metric">
                                 <span class="metric-label">5 Year</span>
-                                <span class="metric-value positive">+3.5%</span>
+                                <span class="metric-value positive">+5.4%</span>
                             </div>
                         </div>
                         <div class="fund-details">
-                            <span class="fund-size">$3.5B AUM</span>
+                            <span class="fund-size">$5.8B AUM</span>
                             <span class="fund-inception">2010</span>
                         </div>
                     </div>
@@ -1248,18 +1272,18 @@
                 <!-- Tabbed Interface -->
                 <div class="services-tabs">
                     <div class="tab-headers" role="tablist">
-                        <button class="tab-header active" role="tab" aria-selected="true" aria-controls="wealth-tab" id="wealth-tab-btn" onclick="switchTab('wealth')">
+                        <a href="services.html#wealth" class="tab-header active" role="tab" aria-selected="true">
                             <i class="fas fa-chart-line"></i>
                             Wealth Management
-                        </button>
-                        <button class="tab-header" role="tab" aria-selected="false" aria-controls="asset-tab" id="asset-tab-btn" onclick="switchTab('asset')">
+                        </a>
+                        <a href="services.html#asset" class="tab-header" role="tab" aria-selected="false">
                             <i class="fas fa-coins"></i>
                             Asset Management
-                        </button>
-                        <button class="tab-header" role="tab" aria-selected="false" aria-controls="advisory-tab" id="advisory-tab-btn" onclick="switchTab('advisory')">
+                        </a>
+                        <a href="services.html#advisory" class="tab-header" role="tab" aria-selected="false">
                             <i class="fas fa-lightbulb"></i>
                             Advisory Services
-                        </button>
+                        </a>
                     </div>
                     
                     <div class="tab-content">
@@ -2360,7 +2384,7 @@
                         <h4 class="footer-heading">Client Resources</h4>
                         <div class="dropdown-group">
                             <div class="dropdown-item">
-                                <a href="#client-login" class="dropdown-link">
+                                <a href="javascript:void(0)" class="dropdown-link" onclick="openLoginModal('client')">
                                     <i class="fas fa-sign-in-alt"></i>
                                     <span>Client Login</span>
                                     <small class="dropdown-desc">Access your account</small>
@@ -2850,6 +2874,132 @@
                 });
             });
 
+            // Performance Chart Implementation
+            const canvas = document.getElementById('performanceChart');
+            const ctx = canvas.getContext('2d');
+            
+            // Chart data
+            const chartData = {
+                '1Y': {
+                    neutrinos: [100, 105, 108, 112, 115, 118, 122, 125, 128, 112.8],
+                    sp500: [100, 102, 104, 106, 108, 105, 107, 109, 111, 108.5],
+                    bloomberg: [100, 101, 102, 103, 104, 103, 104, 105, 106, 104.2]
+                },
+                '3Y': {
+                    neutrinos: [100, 115, 125, 135, 145, 138, 142, 148, 152, 145.8],
+                    sp500: [100, 108, 112, 118, 122, 115, 119, 123, 127, 121.5],
+                    bloomberg: [100, 105, 108, 111, 114, 112, 115, 118, 121, 116.8]
+                },
+                '5Y': {
+                    neutrinos: [100, 125, 145, 165, 185, 178, 188, 198, 208, 192.4],
+                    sp500: [100, 112, 122, 135, 148, 140, 152, 164, 176, 162.3],
+                    bloomberg: [100, 108, 115, 122, 129, 125, 132, 139, 146, 135.7]
+                },
+                '10Y': {
+                    neutrinos: [100, 150, 200, 250, 300, 280, 320, 360, 400, 328.0],
+                    sp500: [100, 125, 150, 175, 200, 185, 215, 245, 275, 237.6],
+                    bloomberg: [100, 115, 130, 145, 160, 150, 165, 180, 195, 175.1]
+                }
+            };
+
+            let currentPeriod = '1Y';
+
+            function drawChart(period) {
+                const data = chartData[period];
+                const width = canvas.width;
+                const height = canvas.height;
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, width, height);
+                
+                // Set up chart dimensions
+                const padding = 40;
+                const chartWidth = width - padding * 2;
+                const chartHeight = height - padding * 2;
+                
+                // Find max value for scaling
+                const allValues = [...data.neutrinos, ...data.sp500, ...data.bloomberg];
+                const maxValue = Math.max(...allValues);
+                const minValue = Math.min(...allValues);
+                const range = maxValue - minValue;
+                
+                // Draw grid lines
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 1;
+                for (let i = 0; i <= 5; i++) {
+                    const y = padding + (chartHeight / 5) * i;
+                    ctx.beginPath();
+                    ctx.moveTo(padding, y);
+                    ctx.lineTo(width - padding, y);
+                    ctx.stroke();
+                }
+                
+                // Draw lines
+                const datasets = [
+                    { data: data.neutrinos, color: '#d4af37', label: 'Neutrinos Capital' },
+                    { data: data.sp500, color: '#d1d5db', label: 'S&P 500' },
+                    { data: data.bloomberg, color: '#404040', label: 'Bloomberg Aggregate' }
+                ];
+                
+                datasets.forEach(dataset => {
+                    ctx.strokeStyle = dataset.color;
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    
+                    dataset.data.forEach((value, index) => {
+                        const x = padding + (chartWidth / (dataset.data.length - 1)) * index;
+                        const y = padding + chartHeight - ((value - minValue) / range) * chartHeight;
+                        
+                        if (index === 0) {
+                            ctx.moveTo(x, y);
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    });
+                    
+                    ctx.stroke();
+                    
+                    // Draw points
+                    ctx.fillStyle = dataset.color;
+                    dataset.data.forEach((value, index) => {
+                        const x = padding + (chartWidth / (dataset.data.length - 1)) * index;
+                        const y = padding + chartHeight - ((value - minValue) / range) * chartHeight;
+                        
+                        ctx.beginPath();
+                        ctx.arc(x, y, 4, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                });
+                
+                // Draw axes
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(padding, padding);
+                ctx.lineTo(padding, height - padding);
+                ctx.lineTo(width - padding, height - padding);
+                ctx.stroke();
+            }
+
+            // Chart button functionality
+            const chartButtons = document.querySelectorAll('.chart-btn');
+            chartButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    chartButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentPeriod = this.dataset.period;
+                    drawChart(currentPeriod);
+                });
+            });
+
+            // Initial chart render
+            drawChart(currentPeriod);
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                drawChart(currentPeriod);
+            });
+
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');
@@ -2860,9 +3010,16 @@
 
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Allow external links and links to other pages to work normally
+                    if (href.includes('.html') || href.startsWith('http') || href.startsWith('//')) {
+                        return; // Don't prevent default for external links
+                    }
+                    
+                    // Only prevent default for internal anchor links
                     e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
+                    const targetSection = document.querySelector(href);
                     if (targetSection) {
                         const offsetTop = targetSection.offsetTop - 80;
                         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
